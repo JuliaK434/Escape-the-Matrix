@@ -1,0 +1,1507 @@
+fileFormatVersion: 2
+guid: 22a8c7a5f0b21264db1cb05d2d7d1d74
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FurnitureState2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.14818764}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd27bb3de956dbb4281b902a30e068c6
+      internalID: 85364774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.47867775, y: 0.11620426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df640424b17329946a467965a198958a
+      internalID: -1722738474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_15
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 256
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.47867703, y: 0.13752651}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1def9783890c77b46859b6d8c3bc55bb
+      internalID: -57254233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_16
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.47867775, y: 0.094882965}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd797d635578c124481cd11fc69f9014
+      internalID: -920721599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_17
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 256
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.073560715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29abed96d7022a344bcb4d84c1ad36d3
+      internalID: -2006125297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.47867727, y: 0.06289959}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5aab7b0f2390064e90ad8c4d8c96cb7
+      internalID: -1760955493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_19
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 256
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.052238464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 302f561ee9df9ac47b8d63424fa81074
+      internalID: 1202395742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4786787, y: 0.052238464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6adba5015451f849b99a9ba39bb2e19
+      internalID: 1763217118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_21
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 256
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4999981, y: 0.06289959}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb7615100883c54a9fcd27d8848c19b
+      internalID: 1510921243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_22
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.49999905, y: 0.06289959}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6ff9c0275e82441bd97b80c08b7aad
+      internalID: 1035211369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_23
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 256
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5213213, y: 0.16950893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b234d8228a05e2341925b98eaf475b67
+      internalID: 1942798136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_24
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5213213, y: 0.073560715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce642db15c57604483e1814dc772c4f
+      internalID: 649306307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_33
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 240
+        width: 32
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5213218, y: 0.15884876}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a740c38dc86c55f4885c8717d756c663
+      internalID: -1168110037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.52842903, y: 0.13752651}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c5dc00c6443e24b99f4088bfe8a82c
+      internalID: -1936262014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_41
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 224
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.51066065, y: 0.12686539}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7e60bbba0bd2a43b3dc11a4a47ad00
+      internalID: -1308458332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_43
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 224
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5106604, y: 0.11620474}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fdbff67c226ec94b91b4259064d8155
+      internalID: -853191884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_45
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 224
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.54264355, y: 0.10554361}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59cb34816cb70624da639680d27d3b89
+      internalID: -1553035997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_46
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5213218, y: 0.15884876}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f34ee670efb1f4aa30884dbdfb90de
+      internalID: -1239176313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_48
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.49999967, y: 1.1609812}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddcbc29f46253ff489c1599478b421cb
+      internalID: -1989833046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 32
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.0593462}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7574dda31c06ad340b0dc6177b864830
+      internalID: -1713454883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_79
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 176
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.507107, y: 0.073560715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76d18bc231277443ac384b3d3cca5dc
+      internalID: -447427797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_82
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 176
+        width: 16
+        height: 48
+      alignment: 9
+      pivot: {x: 0.41471195, y: 0.073560715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a911e3c65839241af3034b7ccc3aaa
+      internalID: 759481206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_83
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 176
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.4928926, y: 0.094882645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7a0ccbbc390b84ea9ebfb85f0e99d2
+      internalID: -1832026230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_86
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 176
+        width: 16
+        height: 48
+      alignment: 9
+      pivot: {x: 0.4999981, y: 0.073560715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1852b7287047f224285ebb673356a1f0
+      internalID: 474426419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_87
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 176
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5142145, y: 1.0756928}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d3dbcb743ff4445bb28b9ee1dd3a39
+      internalID: 1222715113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_116
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 48
+      alignment: 9
+      pivot: {x: 0.48933917, y: 0.19438522}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0240f40d5617f184b8333c2e9cb5ff78
+      internalID: 1713178187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_118
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 16
+        height: 48
+      alignment: 9
+      pivot: {x: 0.49999976, y: 0.14463393}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00abdcb2d1dcf44e8f09c1859bdbf1b
+      internalID: -1749395934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_119
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 16
+        height: 48
+      alignment: 9
+      pivot: {x: 0.58528686, y: 0.038024265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928dd92774c734a4a84fd0cee08252f6
+      internalID: -240174674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_120
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 48
+      alignment: 9
+      pivot: {x: 0.49999952, y: 0.04847272}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e60c35d0fe46d449f31fed9afeabdd
+      internalID: -1801073862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_122
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 16
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5213213, y: 0.08066813}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d718d056324dcd4497992420a29ce20
+      internalID: 231167455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_123
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 128
+        width: 32
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5106602, y: 0.0593462}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e40a23a9c5868a41a05f7435b5d0c82
+      internalID: -323618208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_125
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 128
+        width: 32
+        height: 48
+      alignment: 9
+      pivot: {x: 0.48933887, y: 0.14463393}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6591186e5cc451949a8b684c908af407
+      internalID: -1123949705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_127
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 128
+        width: 32
+        height: 48
+      alignment: 9
+      pivot: {x: 0.47867727, y: 0.13041942}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721837369d857214db78dd6e5dc8ff03
+      internalID: 793716878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_142
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95ef5f02b847f44b823980e44614d6e
+      internalID: 956513072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_143
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 64
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.10554385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c6a565b74ad2943ae2983c5c0089f9
+      internalID: 1088185182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_147
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 64
+        height: 32
+      alignment: 9
+      pivot: {x: 0.49999988, y: 0.061753273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703c945bdd500d145b431d9cccac9a84
+      internalID: 1041809651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_151
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.51066065, y: 0.10554385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4c8477909a0f64e95605a13bb4b33e
+      internalID: 1210389518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_153
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a1862cdca4c3248bc6f745d1e1d65e
+      internalID: -1207108281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_185
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 32
+        height: 48
+      alignment: 9
+      pivot: {x: 0.4466951, y: 0.15884869}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d01fd1b4d26ccf4182e1f146affb803
+      internalID: -1187193443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_187
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 112
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5019797, y: 0.11198131}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6118f06cdc4a34b8694fb6842b94e0
+      internalID: -641249996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_194
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.34008542, y: 0.110874176}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a8da7849540454f94d27a699aff768
+      internalID: 752674016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_196
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5319829, y: 0.06823027}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780441824413e2c47890735e3aefd450
+      internalID: 2138346535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_198
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253534c894982b34ab27992f81b5ce7c
+      internalID: -1375576191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_200
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a785ffde9b9ea254087e7b45cc490ec8
+      internalID: -26722417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_202
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3a86062abc7a24c88c658abedca8c6
+      internalID: -1302693254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_220
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.521322, y: 0.19083206}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d522f5b5619f4484c9e44bf28554928d
+      internalID: 709616811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_221
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5213218, y: 0.09488323}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d18945467fc0b54d8d3562c3e8dad85
+      internalID: 900497948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_223
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.53198266, y: 0.12686618}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7668ee9463ce5654594b69d0fabb8cae
+      internalID: 1710141347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_225
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 48
+        height: 32
+      alignment: 9
+      pivot: {x: 0.4928924, y: 0.08422225}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd630c28cebf0c14e9e99e1faf4624a6
+      internalID: 902744115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_228
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.45735645, y: 0.07356127}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1cbb6ecc4ca98741a242e05bf3996a9
+      internalID: 73616683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_229
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.45735598, y: 0.10554422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af5fede07b4f244e9510979448fd23b
+      internalID: -1746500376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureState2_231
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.48933792, y: 0.11620519}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89bbbf3eb34be54dbddad6525d132d9
+      internalID: 1538634060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5017b0b3d09c23544801578cd09aaf71
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FurnitureState2_0: -500815278
+      FurnitureState2_1: -1092353479
+      FurnitureState2_10: 96264661
+      FurnitureState2_100: 413597755
+      FurnitureState2_101: -1695773394
+      FurnitureState2_102: -1774169170
+      FurnitureState2_103: -2099080109
+      FurnitureState2_104: 1703611988
+      FurnitureState2_105: -785461677
+      FurnitureState2_106: 1226334376
+      FurnitureState2_107: 963540147
+      FurnitureState2_108: -1728849914
+      FurnitureState2_109: -1598299889
+      FurnitureState2_11: 756885232
+      FurnitureState2_110: -1045946070
+      FurnitureState2_111: 479000019
+      FurnitureState2_112: 1745392528
+      FurnitureState2_113: 112240929
+      FurnitureState2_114: 1874490183
+      FurnitureState2_115: 242436473
+      FurnitureState2_116: 1713178187
+      FurnitureState2_117: 1993208947
+      FurnitureState2_118: -1749395934
+      FurnitureState2_119: -240174674
+      FurnitureState2_12: 85364774
+      FurnitureState2_120: -1801073862
+      FurnitureState2_121: 647950911
+      FurnitureState2_122: 231167455
+      FurnitureState2_123: -323618208
+      FurnitureState2_124: -1509031032
+      FurnitureState2_125: -1123949705
+      FurnitureState2_126: -1023476746
+      FurnitureState2_127: 793716878
+      FurnitureState2_128: 85759262
+      FurnitureState2_129: -1424246019
+      FurnitureState2_13: -2071997823
+      FurnitureState2_130: -1665521043
+      FurnitureState2_131: -1755000917
+      FurnitureState2_132: 322121667
+      FurnitureState2_133: 2091038709
+      FurnitureState2_134: 1399227736
+      FurnitureState2_135: 216327004
+      FurnitureState2_136: -1689512048
+      FurnitureState2_137: -1701564607
+      FurnitureState2_138: 506664408
+      FurnitureState2_139: 901852243
+      FurnitureState2_14: -1722738474
+      FurnitureState2_140: 607148143
+      FurnitureState2_141: -1407019421
+      FurnitureState2_142: 956513072
+      FurnitureState2_143: 1088185182
+      FurnitureState2_144: 1005649842
+      FurnitureState2_145: -1736149369
+      FurnitureState2_146: 1571970681
+      FurnitureState2_147: 1041809651
+      FurnitureState2_148: -650224622
+      FurnitureState2_149: -1810339042
+      FurnitureState2_15: -57254233
+      FurnitureState2_150: -881323188
+      FurnitureState2_151: 1210389518
+      FurnitureState2_152: 1862705967
+      FurnitureState2_153: -1207108281
+      FurnitureState2_154: 389877180
+      FurnitureState2_155: -900149584
+      FurnitureState2_156: 907730758
+      FurnitureState2_157: -892204046
+      FurnitureState2_158: 1026428331
+      FurnitureState2_159: -1349937169
+      FurnitureState2_16: -920721599
+      FurnitureState2_160: 785368845
+      FurnitureState2_161: -1547645946
+      FurnitureState2_162: 1284511397
+      FurnitureState2_163: -520613450
+      FurnitureState2_164: 1378996162
+      FurnitureState2_165: 1707690092
+      FurnitureState2_166: -1235251408
+      FurnitureState2_167: 252769400
+      FurnitureState2_168: 2021687043
+      FurnitureState2_169: -1705437856
+      FurnitureState2_17: -2006125297
+      FurnitureState2_170: 1441079823
+      FurnitureState2_171: 838661951
+      FurnitureState2_172: -530294000
+      FurnitureState2_173: -1856147743
+      FurnitureState2_174: 715754066
+      FurnitureState2_175: 1357112625
+      FurnitureState2_176: -1803841016
+      FurnitureState2_177: 1280445070
+      FurnitureState2_178: -86957307
+      FurnitureState2_179: 1739969448
+      FurnitureState2_18: -1760955493
+      FurnitureState2_180: -1492080105
+      FurnitureState2_181: 227733401
+      FurnitureState2_182: 1634948029
+      FurnitureState2_183: -57792039
+      FurnitureState2_184: 1298515509
+      FurnitureState2_185: -1187193443
+      FurnitureState2_186: 895536433
+      FurnitureState2_187: -641249996
+      FurnitureState2_188: -1244179847
+      FurnitureState2_189: -864603025
+      FurnitureState2_19: 1202395742
+      FurnitureState2_190: -1240475054
+      FurnitureState2_191: -738225422
+      FurnitureState2_192: -643007963
+      FurnitureState2_193: -519734252
+      FurnitureState2_194: 752674016
+      FurnitureState2_195: -61223604
+      FurnitureState2_196: 2138346535
+      FurnitureState2_197: -804438771
+      FurnitureState2_198: -1375576191
+      FurnitureState2_199: 305701776
+      FurnitureState2_2: 2130344137
+      FurnitureState2_20: 1763217118
+      FurnitureState2_200: -26722417
+      FurnitureState2_201: 393487726
+      FurnitureState2_202: -1302693254
+      FurnitureState2_203: -1241154326
+      FurnitureState2_204: 1067482838
+      FurnitureState2_205: -1721251986
+      FurnitureState2_206: -1871339128
+      FurnitureState2_207: -1373719647
+      FurnitureState2_208: 920300736
+      FurnitureState2_209: 1183186702
+      FurnitureState2_21: 1510921243
+      FurnitureState2_210: -1984061119
+      FurnitureState2_211: 837472532
+      FurnitureState2_212: 232264710
+      FurnitureState2_213: -1554706057
+      FurnitureState2_214: 43524876
+      FurnitureState2_215: -151808369
+      FurnitureState2_216: -1429847250
+      FurnitureState2_217: -1210570965
+      FurnitureState2_218: -19362648
+      FurnitureState2_219: -789570538
+      FurnitureState2_22: 1035211369
+      FurnitureState2_220: 709616811
+      FurnitureState2_221: 900497948
+      FurnitureState2_222: 1702684416
+      FurnitureState2_223: 1710141347
+      FurnitureState2_224: 783466048
+      FurnitureState2_225: 902744115
+      FurnitureState2_226: -1928229359
+      FurnitureState2_227: -1823774172
+      FurnitureState2_228: 73616683
+      FurnitureState2_229: -1746500376
+      FurnitureState2_23: 1942798136
+      FurnitureState2_230: 1253078403
+      FurnitureState2_231: 1538634060
+      FurnitureState2_232: 28963130
+      FurnitureState2_24: 649306307
+      FurnitureState2_25: 1911708733
+      FurnitureState2_26: 588722547
+      FurnitureState2_27: -354845611
+      FurnitureState2_28: -96955334
+      FurnitureState2_29: -438321905
+      FurnitureState2_3: -1087006518
+      FurnitureState2_30: -1888522962
+      FurnitureState2_31: -1966843443
+      FurnitureState2_32: 1022504486
+      FurnitureState2_33: -1168110037
+      FurnitureState2_34: -1486072876
+      FurnitureState2_35: 1662258483
+      FurnitureState2_36: -222014369
+      FurnitureState2_37: -1500635854
+      FurnitureState2_38: -1936262014
+      FurnitureState2_39: -404366646
+      FurnitureState2_4: -888220749
+      FurnitureState2_40: 1186756590
+      FurnitureState2_41: -1308458332
+      FurnitureState2_42: 1379512244
+      FurnitureState2_43: -853191884
+      FurnitureState2_44: 1536395677
+      FurnitureState2_45: -1553035997
+      FurnitureState2_46: -1239176313
+      FurnitureState2_47: -709250675
+      FurnitureState2_48: -1989833046
+      FurnitureState2_49: 17710394
+      FurnitureState2_5: 753781850
+      FurnitureState2_50: 1987658077
+      FurnitureState2_51: 564046295
+      FurnitureState2_52: -1808729587
+      FurnitureState2_53: 902941646
+      FurnitureState2_54: -1653259021
+      FurnitureState2_55: -811542074
+      FurnitureState2_56: 43352882
+      FurnitureState2_57: -1284126024
+      FurnitureState2_58: -294697934
+      FurnitureState2_59: -1257017509
+      FurnitureState2_6: -1363703064
+      FurnitureState2_60: -1225008626
+      FurnitureState2_61: 1418536396
+      FurnitureState2_62: -536773774
+      FurnitureState2_63: 1108041277
+      FurnitureState2_64: 1166770114
+      FurnitureState2_65: -96905400
+      FurnitureState2_66: 1527962084
+      FurnitureState2_67: 1947084080
+      FurnitureState2_68: -1596221507
+      FurnitureState2_69: 270997086
+      FurnitureState2_7: 2038546818
+      FurnitureState2_70: 55645359
+      FurnitureState2_71: -1116633617
+      FurnitureState2_72: 1820847736
+      FurnitureState2_73: 1834608420
+      FurnitureState2_74: -1615933980
+      FurnitureState2_75: 1579178258
+      FurnitureState2_76: 148561353
+      FurnitureState2_77: -1713454883
+      FurnitureState2_78: -1465824903
+      FurnitureState2_79: -447427797
+      FurnitureState2_8: -338165423
+      FurnitureState2_80: 250650211
+      FurnitureState2_81: 945803283
+      FurnitureState2_82: 759481206
+      FurnitureState2_83: -1832026230
+      FurnitureState2_84: 801922286
+      FurnitureState2_85: -1377639273
+      FurnitureState2_86: 474426419
+      FurnitureState2_87: 1222715113
+      FurnitureState2_88: 950728329
+      FurnitureState2_89: -2012205278
+      FurnitureState2_9: -1202820518
+      FurnitureState2_90: -157516638
+      FurnitureState2_91: -1556050935
+      FurnitureState2_92: 1591846034
+      FurnitureState2_93: -1412829239
+      FurnitureState2_94: -593328761
+      FurnitureState2_95: 709235038
+      FurnitureState2_96: -2000552511
+      FurnitureState2_97: -1926289392
+      FurnitureState2_98: 1565609624
+      FurnitureState2_99: -2125997862
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
