@@ -4685,7 +4685,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2138346535, guid: 22a8c7a5f0b21264db1cb05d2d7d1d74, type: 3}
+  m_Sprite: {fileID: 1061537917, guid: 8e233673c36557f4ca52c47bd8b2e0ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5194,7 +5194,7 @@ GameObject:
   - component: {fileID: 1722917718}
   - component: {fileID: 1722917720}
   m_Layer: 0
-  m_Name: Grass
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5245,7 +5245,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.14145114, g: 0.14150941, b: 0.13416694, a: 1}
+  m_Color: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

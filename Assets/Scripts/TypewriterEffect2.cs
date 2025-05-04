@@ -1,12 +1,10 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 using TMPro;
+using System.Collections;
 
-public class TypewriterEffect : MonoBehaviour
+public class TypewriterEffect2 : MonoBehaviour
 {
-    public TMPro.TextMeshProUGUI textComponent; 
-                                                
+    public TextMeshProUGUI textComponent; 
 
     public float delayBetweenChars = 0.05f;
     public float delayAfterComplete = 1f;
@@ -14,23 +12,24 @@ public class TypewriterEffect : MonoBehaviour
     private string[] textPages;
     private int currentPage = 0;
     private bool isTyping = false;
+    private bool isWaitingAfterComplete = false;
     private Coroutine typingCoroutine;
 
     void Start()
     {
         if (textComponent == null)
         {
-            textComponent = GetComponent<TMPro.TextMeshProUGUI>();
+            textComponent = GetComponent<TextMeshProUGUI>(); 
         }
 
         textPages = new string[] {
-            "- Привет мир",
-            "- Каждый день одно и то же: проснуться, умыться, сделать \"умственную зарядку\" — будто я робот, запрограммированный на бесконечное повторение...",
-            "- Не думать лишнего, не выделяться, не дай бог кто-то заметит, что я... не такой. Как они.",
-            "- Но сегодня что-то не так... В голове — туман, а в груди — странное беспокойство.",
-            "- Будто забыл что-то важное...",
-            "- Может, в шкафу?",
-            "- Там, на полке, лежит старый блокнот. Вроде бы обычный, но... что если в нём есть ответ? Надо проверить."
+            "-Доброе утро!...Опять?",
+            "-Нет, подожди...Разве я уже не просыпался сегодня? Или это снова... тот же день?",
+            "-Комната вроде та же, но... что-то не так.",
+            "- Я забыл выключить компьютер?! Со мной такое впервые.",
+            "- Стоп, а кресло всегда было оранжевого цвета?...",
+            "- Или просто мой мозг так отчаянно цепляется за любую странность, лишь бы не признать: всё это — бесконечный цикл. \"Умственная зарядка\", повиновение, страх... ",
+            "- Пойду проверю свой старый блокнот в шкафу, вдруг найду ответ там..."
         };
 
         StartTypingPage(0);
@@ -43,8 +42,9 @@ public class TypewriterEffect : MonoBehaviour
             if (isTyping)
             {
                 FinishTypingCurrentPage();
+                isWaitingAfterComplete = false;
             }
-            else
+            else if (!isWaitingAfterComplete)
             {
                 ShowNextPage();
             }
@@ -58,7 +58,7 @@ public class TypewriterEffect : MonoBehaviour
             StopCoroutine(typingCoroutine);
         }
 
-        textComponent.text = ""; // Используем text с маленькой буквы
+        textComponent.text = "";
         typingCoroutine = StartCoroutine(TypeText(textPages[pageIndex]));
     }
 
@@ -72,6 +72,7 @@ public class TypewriterEffect : MonoBehaviour
             yield return new WaitForSeconds(delayBetweenChars);
         }
 
+        yield return new WaitForSeconds(delayAfterComplete);
         isTyping = false;
     }
 
@@ -82,7 +83,7 @@ public class TypewriterEffect : MonoBehaviour
             StopCoroutine(typingCoroutine);
         }
 
-        textComponent.text = textPages[currentPage]; // Используем text с маленькой буквы
+        textComponent.text = textPages[currentPage];
         isTyping = false;
     }
 
