@@ -1364,72 +1364,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FurnitureState1_57
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2193e7cb0bd97de4b9c52e89b464c14d
-      internalID: 817054654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FurnitureState1_58
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d9fe28c5d59ccf439bf8e1775ad2b25
-      internalID: -1245471632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FurnitureState1_59
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2852bf4a81a2a8e469955cc2a91baad0
-      internalID: -765209850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: FurnitureState1_60
       rect:
         serializedVersion: 2
@@ -1645,72 +1579,6 @@ TextureImporter:
       bones: []
       spriteID: c3602d762b6fb87419119844f9240982
       internalID: 826870228
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FurnitureState1_70
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31dc397c6bb31304dbcb42be0a4e82ee
-      internalID: 195979408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FurnitureState1_71
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0cabeaf7c79aa945b47ac4d206202e0
-      internalID: 1096061856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FurnitureState1_72
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7bcedfbe5d3db9b4e925c4a0dda13d30
-      internalID: -267399195
       vertices: []
       indices: 
       edges: []
@@ -1941,10 +1809,10 @@ TextureImporter:
         serializedVersion: 2
         x: 96
         y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 48
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.023809433}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1953,50 +1821,6 @@ TextureImporter:
       bones: []
       spriteID: a3d67ec111d2cd840a7bca6015d8bce3
       internalID: 1346227114
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FurnitureState1_84
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd75345c20168f04fa31f180c5c32426
-      internalID: 1642537090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FurnitureState1_85
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 176
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e398cd9b0d1df9c4bb5cbf03bbb3ef66
-      internalID: 1927032378
       vertices: []
       indices: 
       edges: []
