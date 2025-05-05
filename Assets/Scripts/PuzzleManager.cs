@@ -3,6 +3,7 @@ using TMPro;
 
 public class PuzzleManager : MonoBehaviour
 {
+    [SerializeField] private DoorTrigger exitDoor;
     public TMP_InputField inputField;
     public GameObject puzzleUI;
     public TextMeshProUGUI hintText;
@@ -62,6 +63,14 @@ public class PuzzleManager : MonoBehaviour
         {
             ClosePuzzle();
             dialogueSystem.StartPostPuzzleDialogue();
+            if (exitDoor != null)
+            {
+                exitDoor.UnlockDoor();
+            }
+            else
+            {
+                Debug.LogError("Exit door reference not set!", this);
+            }
         }
         else
         {
