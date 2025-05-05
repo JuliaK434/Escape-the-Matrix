@@ -6,18 +6,32 @@ public class PuzzleManager : MonoBehaviour
     public TMP_InputField inputField;
     public GameObject puzzleUI;
     public TextMeshProUGUI hintText;
+    public TypewriterEffect dialogueSystem;
     private bool isPuzzleActive;
 
+    public static PuzzleManager Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        
+    }
     private void Update()
     {
         if (isPuzzleActive)
         {
+           
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 ClosePuzzle();
             }
-            else if (Input.GetKeyDown(KeyCode.Return)) // Проверка нажатия Enter
+
+            else if (Input.GetKeyDown(KeyCode.Return))  
             {
+                
                 CheckAnswer();
             }
         }
@@ -29,7 +43,7 @@ public class PuzzleManager : MonoBehaviour
         inputField.text = "";
         isPuzzleActive = true;
         Player.Instance.SetCanMove(false);
-        inputField.Select(); // Автоматически активируем поле ввода
+        inputField.Select(); 
     }
 
     private void ClosePuzzle()
@@ -43,17 +57,17 @@ public class PuzzleManager : MonoBehaviour
     {
         string answer = inputField.text.Trim().ToLower();
 
-        if (answer == "good morning" || answer == "goodmorning")
+
+        if (answer.Contains("good morning") || answer.Contains("goodmorning"))
         {
             ClosePuzzle();
-            Debug.Log("Головоломка решена!");
-            // Здесь можно вызвать диалог
+            dialogueSystem.StartPostPuzzleDialogue();
         }
         else
         {
             inputField.text = "";
             hintText.text = "Неверно! Попробуйте ещё раз";
-            inputField.Select(); // Снова активируем поле ввода после очистки
+            inputField.Select();
         }
     }
 }
