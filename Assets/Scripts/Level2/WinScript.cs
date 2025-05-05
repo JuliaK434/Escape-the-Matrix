@@ -1,28 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class WinScript:MonoBehaviour
+public class WinScript : MonoBehaviour
 {
-    int fullElement;
-    public static int myElement;
-    public GameInput Puzzle;
-    public GameObject Panel;
-    public GameObject winPannel;
+    int fullElement;//Кол-во всех элементов пазла
+    public static int myElement;//Число элементов, лежащих на своем месте
+    public GameObject myPuzzl;//Родительский объект, содержащий все элементы пазла 
+    public GameObject myPanel;//Панель с пазлом
+    public GameObject winPanel;//Панель победы
 
     void Start()
     {
-        fullElement = Puzzle.transform.childCount;    
+        fullElement = myPuzzl.transform.childCount;//Получаем кол-во элементов пазла
     }
 
-    private void Update()
+    void Update()
     {
         if (fullElement == myElement)
-        {
-            Panel.SetActive(false);
-            winPannel.SetActive(true);
+        {//Если все элементы на своем месте
+            myPanel.SetActive(false);//Скрываем панель с пазлом
+            winPanel.SetActive(true);//Показываем панель победы
         }
     }
+
+    //Функция увеличения кол-ва элементов, которые лежат на своем месте
     public static void AddElement()
     {
-        myElement++;
+        myElement++;//Увеличиваем
     }
 }

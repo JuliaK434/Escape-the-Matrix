@@ -1,51 +1,49 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Actions: MonoBehaviour
+public class MovengPuzzl : MonoBehaviour
 {
-    bool move;
-    Vector2 mousePos;
-    float startPosX;
-    float startPosY;
-    public GameObject form;
-    private bool placed = false;
+    bool move;//Перемещаем/не перемещаем
+    Vector2 mousePos;//Позиция курсора
+    float startPosX;//Начальное пеложение объекта по Х
+    float startPosY;//Начальное пеложение объекта по Y
+    public GameObject form;//Прозрачная форма с правильной позицией
+    bool finish;
 
-    private void OnMouseDown()
+    void OnMouseDown()
     {
         if (Input.GetMouseButtonDown(0))
-        {
-            move = true;
-            mousePos = Input.mousePosition;
-            startPosX = mousePos.x - this.transform.localPosition.x;
-            startPosY = mousePos.y - this.transform.localPosition.y;
+        {//Когда пользователь нажимает левой клавишей мыши
+            move = true;//Разрешаем перемещение
+            mousePos = Input.mousePosition;//Получаем координаты курсора
+
+            startPosX = mousePos.x - this.transform.localPosition.x;//Записываем стартовое положение по Х
+            startPosY = mousePos.y - this.transform.localPosition.y;//Записываем стартовое положение по Y
         }
     }
 
     void OnMouseUp()
-    {
-        move = false;
-        if (Mathf.Abs(this.transform.localPosition.x - form.transform.localPosition.x) <= 25f &&
-            Mathf.Abs(this.transform.localPosition.y - form.transform.localPosition.y) <=25f)
+    {//Когда пользователь отпускает клавишу мыши
+        move = false;//Запрещяем перемещение
+
+        //Если Объект рядом со своим местом, то помещаем его его туда и запрещаем дальнейшее перемещение
+        if (Mathf.Abs(this.transform.localPosition.x - form.transform.localPosition.x) <= 5f &&
+           Mathf.Abs(this.transform.localPosition.y - form.transform.localPosition.y) <= 5f)
         {
-            if(!placed) {
-                WinScript.AddElement();
-                SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-                this.transform.position = new Vector2(form.transform.position.x, form.transform.position.y);
-                if (spriteRenderer != null)
-                {
-                    spriteRenderer.sortingOrder = 1;
-                }
-                placed = true;
-                GetComponent<Renderer>().enabled = false;
-            }
+            this.transform.position = new Vector2(form.transform.position.x, form.transform.position.y);
+            finish = true;
+            WinScript.AddElement();//Увеличиваем кол-во элементов на своем месте
         }
     }
 
+    //Само перемещение
     void Update()
     {
-        if(move == true)
+        if (move == true && finish == false)
         {
-            mousePos = Input.mousePosition;
-            this.gameObject.transform.localPosition = new Vector2(mousePos.x - startPosX, mousePos.y - startPosY);
+            mousePos = Input.mousePosition;//Получаем координаты курсора
+            this.gameObject.transform.localPosition = new Vector2(mousePos.x - startPosX, mousePos.y - startPosY);//Перемещаем обЪект
         }
     }
 }
