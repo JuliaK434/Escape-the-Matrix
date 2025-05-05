@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerInteraction : MonoBehaviour
+public class PlayerInteraction2 : MonoBehaviour
 {
     public KeyCode interactionKey = KeyCode.E;
     public GameObject puzzleMenu;
@@ -10,21 +10,21 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (Input.GetKeyDown(interactionKey))
         {
-            // Проверяем, есть ли рядом шкаф и можно ли взаимодействовать
             if (currentWardrobe != null && currentWardrobe.CanInteract())
             {
-                if (PuzzleManager.Instance != null)
+                // Проверяем, что Instance существует
+                if (PuzzleManager2.Instance == null)
                 {
-                    PuzzleManager.Instance.OpenPuzzle();
+                    Debug.LogError("PuzzleManager2.Instance is NULL! Проверьте:");
+                    Debug.LogError("- Добавлен ли PuzzleManager2 на сцену?");
+                    Debug.LogError("- Активен ли он?");
+                    return;
                 }
-                else
-                {
-                    Debug.LogError("PuzzleManager.Instance is NULL!");
-                }
+                PuzzleManager2.Instance.OpenPuzzle();
             }
         }
     }
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Wardrobe"))
@@ -34,7 +34,6 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
-    // Сбрасываем шкаф при выходе из триггера
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Wardrobe"))
@@ -44,5 +43,5 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
-    
+
 }

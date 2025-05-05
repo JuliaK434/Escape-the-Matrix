@@ -2,20 +2,18 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 
-public class TypewriterEffect : MonoBehaviour
+public class TypewriterEffect3 : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public float delayBetweenChars = 0.05f;
     public float delayAfterComplete = 1f;
 
     private string[] introDialogue = {
-        "- Привет мир!",
-        "- Каждый день одно и то же: проснуться, умыться, сделать \"умственную зарядку\" — будто я робот, запрограммированный на бесконечное повторение...",
-        "- Не думать лишнего, не выделяться, не дай бог кто-то заметит, что я... не такой. Как они.",
-        "- Но сегодня что-то не так... В голове — туман, а в груди — странное беспокойство.",
-        "- Будто забыл что-то важное...",
-        "- Может, в шкафу?",
-        "- Там, на полке, лежит старый блокнот. Вроде бы обычный, но... что если в нём есть ответ? Надо проверить."
+         "- Дай угадаю... Снова утро?",
+            "- С каждым разом это звучит всё более издевательски. Как будто сама реальность издевается надо мной.",
+            "- Но сегодня всё иначе. Комната... сместилась. Стены будто дышат, углы плывут.",
+            "- Моя кровать всегда была такой маленькой? Я не помню как наполнял ванну... Неужели я забыл закрыть холодильник?",
+            "- На столе — записка. Опять шифр??"
     };
 
     private string[] postPuzzleDialogue = {
@@ -38,7 +36,6 @@ public class TypewriterEffect : MonoBehaviour
             textComponent = GetComponent<TextMeshProUGUI>();
         }
 
-        // Начинаем с начального диалога
         StartIntroDialogue();
     }
 
@@ -119,7 +116,6 @@ public class TypewriterEffect : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-            // Можно добавить событие окончания диалога
         }
     }
 }
