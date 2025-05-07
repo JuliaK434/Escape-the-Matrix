@@ -110,155 +110,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_0
+      name: RADL_Book_white_0
       rect:
         serializedVersion: 2
-        x: 44
+        x: 0
         y: 0
-        width: 31
-        height: 70
+        width: 190
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 54d7a982679db8140800000000000000
-      internalID: 4723107735738678597
+      spriteID: c4c252827c43cf34f849f7f2f08914f8
+      internalID: 336067103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_1
+      name: RADL_Book_white_1
       rect:
         serializedVersion: 2
-        x: 172
+        x: 190
         y: 0
-        width: 31
-        height: 70
+        width: 190
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e596485bbd7608990800000000000000
-      internalID: -7385789195546760866
+      spriteID: 3f9ef9933a269e54c82458c5f94af018
+      internalID: 1196442071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_2
+      name: RADL_Book_white_2
       rect:
         serializedVersion: 2
-        x: 300
+        x: 380
         y: 0
-        width: 31
-        height: 70
+        width: 190
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 184dda4e3d6b3ec20800000000000000
-      internalID: 3234629978573100161
+      spriteID: e476f0c0b3d1dcf408c5b563660adb42
+      internalID: -1216412237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_3
+      name: RADL_Book_white_3
       rect:
         serializedVersion: 2
-        x: 428
+        x: 570
         y: 0
-        width: 31
-        height: 71
+        width: 190
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 96cb1dafe7d917850800000000000000
-      internalID: 6373048116405451881
+      spriteID: e4eca1bc385cde4438f4cc3a04e51046
+      internalID: 1865054218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_4
+      name: RADL_Book_white_4
       rect:
         serializedVersion: 2
-        x: 556
+        x: 760
         y: 0
-        width: 31
-        height: 72
+        width: 190
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3d4b2fc561f8fc460800000000000000
-      internalID: 7264182050183361747
+      spriteID: 7b71ff5f5462aba469d69c2453ae4352
+      internalID: -1404141803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_5
+      name: RADL_Book_white_5
       rect:
         serializedVersion: 2
-        x: 684
+        x: 950
         y: 0
-        width: 31
-        height: 72
+        width: 190
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bd9b7fa6335a9a8d0800000000000000
-      internalID: -2834552850196481573
+      spriteID: 84735d015ad7dc54aac7edc9d1463003
+      internalID: -2019400134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_6
+      name: RADL_Book_white_6
       rect:
         serializedVersion: 2
-        x: 812
+        x: 1140
         y: 0
-        width: 31
-        height: 71
+        width: 190
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 40a65a6e4146f7d20800000000000000
-      internalID: 3278449094680734212
+      spriteID: 4f2a7f604de42074488c9f5fd79d1c71
+      internalID: -1520571239
       vertices: []
       indices: 
       edges: []
@@ -267,7 +267,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5022cb33edfc9e74dab1a18bae0c9bc4
     internalID: 0
     vertices: []
     indices: 
@@ -277,13 +277,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Idle_0: 4723107735738678597
-      Idle_1: -7385789195546760866
-      Idle_2: 3234629978573100161
-      Idle_3: 6373048116405451881
-      Idle_4: 7264182050183361747
-      Idle_5: -2834552850196481573
-      Idle_6: 3278449094680734212
+      RADL_Book_white_0: 336067103
+      RADL_Book_white_1: 1196442071
+      RADL_Book_white_2: -1216412237
+      RADL_Book_white_3: 1865054218
+      RADL_Book_white_4: -1404141803
+      RADL_Book_white_5: -2019400134
+      RADL_Book_white_6: -1520571239
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -22,7 +22,6 @@ public class PlayerInteraction2_1 : MonoBehaviour
         if (other.CompareTag("Computer"))
         {
             isNearComputer = true;
-            Debug.Log("Вошел в зону компьютера"); // Для отладки
         }
     }
 
@@ -31,7 +30,6 @@ public class PlayerInteraction2_1 : MonoBehaviour
         if (other.CompareTag("Computer"))
         {
             isNearComputer = false;
-            Debug.Log("Вышел из зоны компьютера"); // Для отладки
         }
     }
 }

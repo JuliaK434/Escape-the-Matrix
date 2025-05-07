@@ -1,12 +1,16 @@
-/*using UnityEngine;
+using UnityEngine;
+using TMPro;
 
-public class BookPuzzleManager : MonoBehaviour
+public class PuzzleManager2 : MonoBehaviour
 {
-    public GameObject puzzlePanel;
-    public GameObject winPanel;
-    public TypewriterEffect2 dialogueSystem;
+    [SerializeField] private DoorTrigger exitDoor;
+    public TMP_InputField inputField;
+    public GameObject puzzleUI;
+    public TextMeshProUGUI hintText;
+    public TypewriterEffect2_2 dialogueSystem;
+    private bool isPuzzleActive;
 
-    public static BookPuzzleManager Instance;
+    public static PuzzleManager2 Instance;
 
     private void Awake()
     {
@@ -14,46 +18,61 @@ public class BookPuzzleManager : MonoBehaviour
         {
             Instance = this;
         }
+
+    }
+    private void Update()
+    {
+        if (isPuzzleActive)
+        {
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                ClosePuzzle();
+            }
+
+            else if (Input.GetKeyDown(KeyCode.Return))
+            {
+
+                CheckAnswer();
+            }
+        }
     }
 
     public void OpenPuzzle()
     {
-        Debug.Log($"Puzzle elements: {puzzlePanel.transform.GetChild(0).childCount}");
-        foreach (Transform piece in puzzlePanel.transform.GetChild(0))
-        {
-            Debug.Log($"Piece: {piece.name}, active: {piece.gameObject.activeSelf}");
-        }
-        puzzlePanel.SetActive(true);
-        winPanel.SetActive(false);
-        WinScript.myElement = 0;
+        puzzleUI.SetActive(true);
+        inputField.text = "";
+        isPuzzleActive = true;
         Player.Instance.SetCanMove(false);
-        Transform puzzleParent = puzzlePanel.transform.Find("Puzzle");
-        
-
-        foreach (Transform piece in puzzleParent)
-        {
-            piece.gameObject.SetActive(true);
-        }
-        var canvasGroup = puzzlePanel.GetComponent<CanvasGroup>();
-        if (canvasGroup == null)
-        {
-            canvasGroup = puzzlePanel.AddComponent<CanvasGroup>();
-        }
-        canvasGroup.alpha = 1;
-        canvasGroup.blocksRaycasts = true;
+        inputField.Select();
     }
 
-    public void PuzzleCompleted()
+    private void ClosePuzzle()
     {
-        winPanel.SetActive(true);
-        Invoke("FinishPuzzle", 2f);
-    }
-
-    private void FinishPuzzle()
-    {
-        puzzlePanel.SetActive(false);
-        winPanel.SetActive(false);
+        puzzleUI.SetActive(false);
+        isPuzzleActive = false;
         Player.Instance.SetCanMove(true);
-        dialogueSystem.StartPostPuzzleDialogue();
     }
-}*/
+
+    public void CheckAnswer()
+    {
+        string answer = inputField.text.Trim().ToLower();
+
+
+        if (answer.Contains("good morning again") || answer.Contains("goodmorningagain"))
+        {
+            ClosePuzzle();
+            //dialogueSystem.StartPostPuzzleDialogue();
+            if (exitDoor != null)
+            {
+                exitDoor.UnlockDoor();
+            }
+        }
+        else
+        {
+            inputField.text = "";
+            hintText.text = "Неверно! Попробуйте ещё раз";
+            inputField.Select();
+        }
+    }
+}

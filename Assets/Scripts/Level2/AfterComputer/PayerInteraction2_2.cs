@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerInteraction : MonoBehaviour
+public class PlayerInteraction2_2 : MonoBehaviour
 {
     public KeyCode interactionKey = KeyCode.E;
     public GameObject puzzleMenu;
@@ -12,14 +12,18 @@ public class PlayerInteraction : MonoBehaviour
         {
             if (currentWardrobe != null && currentWardrobe.CanInteract())
             {
-                if (PuzzleManager.Instance != null)
+                if (PuzzleManager2.Instance != null)
                 {
-                    PuzzleManager.Instance.OpenPuzzle();
+                    PuzzleManager2.Instance.OpenPuzzle();
+                }
+                else
+                {
+                    Debug.LogError("BookPuzzleManager.Instance не найден!");
                 }
             }
         }
     }
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Wardrobe"))
@@ -36,5 +40,5 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
-    
+
 }
