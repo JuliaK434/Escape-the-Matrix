@@ -2,21 +2,20 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 
-public class TypewriterEffect2 : MonoBehaviour
+public class TypewriterEffect2_1 : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public float delayBetweenChars = 0.05f;
     public float delayAfterComplete = 1f;
 
     private string[] introDialogue = {
-         "-Доброе утро!...Опять?",
-         "-Нет, подожди...Разве я уже не просыпался сегодня? Или это снова... тот же день?",
-         "-Комната вроде та же, но... что-то не так.",
+         "- Ура моя картина восстановлена!",
+         "- Нужно все же выключить этот компьютер, а то слишком много электроэнергии уйдет.",
+         "- Комната вроде та же, но... что-то не так.",
          "- Я забыл выключить компьютер?! Со мной такое впервые.",
          "- Стоп, а кресло всегда было оранжевого цвета?...",
          "- Или просто мой мозг так отчаянно цепляется за любую странность, лишь бы не признать: всё это — бесконечный цикл. \"Умственная зарядка\", повиновение, страх... ",
-         "- Почему моя картина лежит на столе разрезанная?!",
-         "- Нужно срочно её склеить!"
+         "- Пойду проверю свой старый блокнот в шкафу, вдруг найду ответ там..."
     };
 
 
@@ -24,7 +23,7 @@ public class TypewriterEffect2 : MonoBehaviour
     private int currentPage = 0;
     private bool isTyping = false;
     private Coroutine typingCoroutine;
-    
+
     void Start()
     {
         if (textComponent == null)

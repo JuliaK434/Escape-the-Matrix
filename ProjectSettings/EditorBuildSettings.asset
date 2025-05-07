@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1_Home.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Level2_Home.unity
+    guid: 267f41e9d2064a74790f2d544a81fad8
+  - enabled: 1
+    path: Assets/Scenes/Puzzle_level2.unity
+    guid: d10a6d9446a90c24a9f13bd394966097
+  - enabled: 1
+    path: Assets/Scenes/Level2_HomeAfterPuzzle.unity
+    guid: 22cf4dfb7717b9547a3c4a9596069827
+  - enabled: 1
+    path: Assets/Scenes/Level3_Home.unity
+    guid: 414779ff4b8a13c4eb0faec1128407a2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

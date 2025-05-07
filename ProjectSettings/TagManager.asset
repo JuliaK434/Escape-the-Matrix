@@ -7,6 +7,8 @@ TagManager:
   - Interactable
   - Wardrobe
   - Door
+  - Book
+  - Computer
   layers:
   - Default
   - TransparentFX
