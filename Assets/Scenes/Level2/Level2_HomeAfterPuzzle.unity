@@ -1218,7 +1218,7 @@ GameObject:
   - component: {fileID: 476098166}
   - component: {fileID: 476098165}
   - component: {fileID: 476098164}
-  - component: {fileID: 476098163}
+  - component: {fileID: 476098169}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1226,19 +1226,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &476098163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476098162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18372d52a32d62542a7ec8dc8e16850d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionKey: 101
 --- !u!70 &476098164
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1378,6 +1365,19 @@ Transform:
   - {fileID: 780749111}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &476098169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476098162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8efa8fc55b6f5499ce00b4ed0cad43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionKey: 101
 --- !u!1 &496439121
 GameObject:
   m_ObjectHideFlags: 0

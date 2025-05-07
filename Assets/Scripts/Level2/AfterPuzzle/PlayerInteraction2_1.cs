@@ -4,13 +4,13 @@ using UnityEngine.SceneManagement;
 public class PlayerInteraction2_1 : MonoBehaviour
 {
     [SerializeField] private KeyCode interactionKey = KeyCode.E;
-    private BookPuzzleTrigger currentBookTrigger;
-
+    private bool isNearComputer = false;
+    
     void Update()
     {
         if (Input.GetKeyDown(interactionKey))
         {
-            if (currentBookTrigger != null && currentBookTrigger.CanInteractWithBook())
+            if (isNearComputer)
             {
                 SceneManager.LoadScene("Computer_level2");
             }
@@ -21,7 +21,8 @@ public class PlayerInteraction2_1 : MonoBehaviour
     {
         if (other.CompareTag("Computer"))
         {
-            currentBookTrigger = other.GetComponent<BookPuzzleTrigger>();
+            isNearComputer = true;
+            Debug.Log("Вошел в зону компьютера"); // Для отладки
         }
     }
 
@@ -29,8 +30,8 @@ public class PlayerInteraction2_1 : MonoBehaviour
     {
         if (other.CompareTag("Computer"))
         {
-            currentBookTrigger = null;
+            isNearComputer = false;
+            Debug.Log("Вышел из зоны компьютера"); // Для отладки
         }
     }
 }
-
