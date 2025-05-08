@@ -2,13 +2,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
+    public SceneTransition sceneTransition;
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        sceneTransition.LoadSceneWithFade(0);
+        SceneManager.LoadScene(1);
     }
     public void ExitGame()
     {
-        Debug.Log("Игра закрылась");
+        Debug.Log("Вышли из игры");
         Application.Quit();
     }
 }
