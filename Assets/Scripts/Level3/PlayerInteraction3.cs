@@ -5,7 +5,10 @@ public class PlayerInteraction3 : MonoBehaviour
     public KeyCode interactionKey = KeyCode.E;
     public GameObject puzzleMenu;
     private WardrobeTrigger currentWardrobe;
-
+    public bool hasPhone = false;
+    public bool isNearSofa = false;
+    public static bool hasBone = false;
+    public static string selectedFood = "";
     void Update()
     {
         if (Input.GetKeyDown(interactionKey))
