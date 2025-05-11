@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Sofa : MonoBehaviour
 {
@@ -29,9 +30,8 @@ public class Sofa : MonoBehaviour
     {
         if (canInteract && Input.GetKeyDown(interactKey))
         {
-            
-            Debug.Log("»грок сел на диван и играет в телефон!  вест завершен.");
-            // «десь можно добавить завершение квеста
+
+            SceneManager.LoadScene("Maze");
         }
     }
 }

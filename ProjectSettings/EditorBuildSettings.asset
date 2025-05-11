@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level3/Level3_Home.unity
     guid: 414779ff4b8a13c4eb0faec1128407a2
   - enabled: 1
+    path: Assets/Scenes/Level3/Maze.unity
+    guid: 7e68841c3956aca4e85fcd6f2c19b2c6
+  - enabled: 1
     path: Assets/Scenes/Level3/Level3_Fredge.unity
     guid: bece6ea7e7dac134f8237e1b18630379
   - enabled: 1
