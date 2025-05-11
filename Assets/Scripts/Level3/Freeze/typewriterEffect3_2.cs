@@ -2,21 +2,28 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 
-public class TypewriterEffect2_2 : MonoBehaviour
+public class TypewriterEffect3_2 : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public float delayBetweenChars = 0.05f;
     public float delayAfterComplete = 1f;
 
     private string[] introDialogue = {
-         "- Хм... что может значить \"Цезарь\" и ключ 8-2*2?",
-         "- В этом определенно должен быть какой-то смысл.",
-         "- Пойду проверю свой старый блокнот в шкафу, вдруг найду ответ там..."
+        "- Думаю эта еда должна понравиться псу.",
+        "- Только нужно быть аккуратным, а то вдруг укусит."
     };
+
     private string[] postPuzzleDialogue = {
-        "- И снова доброе утро...",
-        "- Я не удивлен. Как будто я живу в матрице ахахаха.",
-        "- Но это не возможно. А мне пора идти на работу."
+        "- Что сейчас было?...",
+        "- Куда он пропал?...",
+        "- Всё. Мне срочно нужно брать отпуск.",
+        "- Ладно, думаю по традиции, перед работой, нужно заглянуть в мой блокнот.",
+        "- Вместо блокнота записка? Интересно, что-то новенькое."
+    };
+
+    private string[] afterPuzzleDialogue = {
+        "- Сегодня утро вовсе не доброе...",
+        "- Ладно, пора идти на работу. Сегодня мне нужно много чего сделать."
     };
 
     private string[] currentDialogue;
@@ -45,6 +52,13 @@ public class TypewriterEffect2_2 : MonoBehaviour
     public void StartPostPuzzleDialogue()
     {
         currentDialogue = postPuzzleDialogue;
+        currentPage = 0;
+        gameObject.SetActive(true);
+        StartTypingPage(currentPage);
+    }
+    public void StartAfterPuzzleDialogue()
+    {
+        currentDialogue = afterPuzzleDialogue;
         currentPage = 0;
         gameObject.SetActive(true);
         StartTypingPage(currentPage);
@@ -109,7 +123,7 @@ public class TypewriterEffect2_2 : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+            textComponent.text = "";
         }
     }
 }

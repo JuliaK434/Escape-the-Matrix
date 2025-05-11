@@ -34,7 +34,6 @@ public class DoorTrigger : MonoBehaviour
         {
             if (!isLocked)
             {
-                Debug.Log("Есть контакт!");
                 SceneManager.LoadScene(nextSceneName);
             }
             else
@@ -53,8 +52,5 @@ public class DoorTrigger : MonoBehaviour
         }
     }
 
-   /* private void Reset()
-    {
-        GetComponent<Collider2D>().isTrigger = true;
-    }*/
+
 }

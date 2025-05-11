@@ -16,7 +16,6 @@ public class ClutteredSofa : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canInteract = true;
-            Debug.Log("Игрок рядом с диваном!");
             if (!isCleaned) sitPrompt.SetActive(true);
         }
     }
@@ -48,19 +47,16 @@ public class ClutteredSofa : MonoBehaviour
 
     private void CleanUp()
     {
-        Debug.Log("Начало уборки...");
         foreach (var item in clutterItems)
         {
             if (item != null)
             {
                 item.SetActive(false);
-                Debug.Log("Убрали: " + item.name);
             }
         }
         cleanSofa.SetActive(true);
         isCleaned = true;
         sitPrompt.SetActive(false);
-        Debug.Log("Диван убран!");
     }
 
     private void SitAndPlay()

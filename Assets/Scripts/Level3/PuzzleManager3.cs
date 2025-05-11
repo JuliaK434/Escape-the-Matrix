@@ -7,7 +7,7 @@ public class PuzzleManager3 : MonoBehaviour
     public TMP_InputField inputField;
     public GameObject puzzleUI;
     public TextMeshProUGUI hintText;
-    public TypewriterEffect3 dialogueSystem;
+    public TypewriterEffect3_2 dialogueSystem;
     private bool isPuzzleActive;
 
     public static PuzzleManager3 Instance;
@@ -59,17 +59,13 @@ public class PuzzleManager3 : MonoBehaviour
         string answer = inputField.text.Trim().ToLower();
 
 
-        if (answer.Contains("good morning") || answer.Contains("goodmorning"))
+        if (answer.Contains("i think good morning") || answer.Contains("ithinkgoodmorning"))
         {
             ClosePuzzle();
-            dialogueSystem.StartPostPuzzleDialogue();
+            dialogueSystem.StartAfterPuzzleDialogue();
             if (exitDoor != null)
             {
                 exitDoor.UnlockDoor();
-            }
-            else
-            {
-                Debug.LogError("Exit door reference not set!", this);
             }
         }
         else

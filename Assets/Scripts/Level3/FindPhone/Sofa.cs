@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class Sofa : MonoBehaviour
 {
-    public KeyCode interactKey = KeyCode.E; // Клавиша для взаимодействия
-    public GameObject sitPrompt; // Подсказка "Нажми E"
+    public KeyCode interactKey = KeyCode.E; 
+    public GameObject sitPrompt; 
 
     private bool canInteract = false;
 
@@ -13,7 +13,7 @@ public class Sofa : MonoBehaviour
         if (other.CompareTag("Player") && other.GetComponent<PlayerInteraction3>().hasPhone)
         {
             canInteract = true;
-            sitPrompt.SetActive(true); // Показываем подсказку
+            sitPrompt.SetActive(true);
         }
     }
 
@@ -22,7 +22,7 @@ public class Sofa : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canInteract = false;
-            sitPrompt.SetActive(false); // Скрываем подсказку
+            sitPrompt.SetActive(false); 
         }
     }
 

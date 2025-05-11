@@ -2,22 +2,20 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 
-public class TypewriterEffect2_2 : MonoBehaviour
+public class TypewriterEffect3_1 : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public float delayBetweenChars = 0.05f;
     public float delayAfterComplete = 1f;
 
     private string[] introDialogue = {
-         "- Хм... что может значить \"Цезарь\" и ключ 8-2*2?",
-         "- В этом определенно должен быть какой-то смысл.",
-         "- Пойду проверю свой старый блокнот в шкафу, вдруг найду ответ там..."
+         "- Какое классное обовление! Ставлю 10 звезд!",
+         "- Эм...",
+         "- Откуда тут пёс?!.",
+         "- Он выглядит дружелюбно. Наверное голодный.",
+         "- Нужно посмотреть, может для него что-то найдется у меня в холодильнике."
     };
-    private string[] postPuzzleDialogue = {
-        "- И снова доброе утро...",
-        "- Я не удивлен. Как будто я живу в матрице ахахаха.",
-        "- Но это не возможно. А мне пора идти на работу."
-    };
+
 
     private string[] currentDialogue;
     private int currentPage = 0;
@@ -42,13 +40,7 @@ public class TypewriterEffect2_2 : MonoBehaviour
         StartTypingPage(currentPage);
     }
 
-    public void StartPostPuzzleDialogue()
-    {
-        currentDialogue = postPuzzleDialogue;
-        currentPage = 0;
-        gameObject.SetActive(true);
-        StartTypingPage(currentPage);
-    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))

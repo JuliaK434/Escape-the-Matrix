@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class ExitDoor : MonoBehaviour
 {
-    [SerializeField] private TMP_Text notEnoughStarsText; // "Собери все звёзды!"
-    [SerializeField] private TMP_Text exitHintText; // "Пора на выход!"
+    [SerializeField] private TMP_Text notEnoughStarsText; 
+    [SerializeField] private TMP_Text exitHintText; 
     [SerializeField] private float messageDisplayTime = 2f;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -14,13 +14,11 @@ public class ExitDoor : MonoBehaviour
         {
             if (StarManager.Instance.GetCollectedStars() >= StarManager.Instance.GetTotalStars())
             {
-                // Все звёзды собраны — скрываем подсказку и загружаем уровень
                 exitHintText.gameObject.SetActive(false);
-                SceneManager.LoadScene("NextLevel");
+                SceneManager.LoadScene("Level3_Fredge");
             }
             else
             {
-                // Звёзд не хватает — показываем сообщение
                 ShowNotEnoughStarsMessage();
             }
         }

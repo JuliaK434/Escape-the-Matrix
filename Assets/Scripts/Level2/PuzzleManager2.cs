@@ -62,7 +62,7 @@ public class PuzzleManager2 : MonoBehaviour
         if (answer.Contains("good morning again") || answer.Contains("goodmorningagain"))
         {
             ClosePuzzle();
-            //dialogueSystem.StartPostPuzzleDialogue();
+            dialogueSystem.StartPostPuzzleDialogue();
             if (exitDoor != null)
             {
                 exitDoor.UnlockDoor();
