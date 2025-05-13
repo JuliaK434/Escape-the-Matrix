@@ -38,7 +38,7 @@ public class LookAround : Leaf
 
         if(Time.time - _startTime >= lookDuration / 2)
         {
-            Debug.Log("In look around");
+            //Debug.Log("In look around");
             transform.rotation = Quaternion.Euler(0, -180, 0);
         }
 

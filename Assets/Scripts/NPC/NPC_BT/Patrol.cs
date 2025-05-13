@@ -23,6 +23,7 @@ public class Patrol: Leaf
             blackboard._agent.destination = blackboard.wayPoints[_currentWaypoint].position;
 
             initialized = true;
+
         }
 
         if(blackboard.wayPoints.Length == 0)

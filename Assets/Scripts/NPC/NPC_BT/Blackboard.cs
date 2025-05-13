@@ -6,7 +6,7 @@ public class Blackboard : MonoBehaviour
     public bool SeePlayer;
     public float ViewAngle;
     public bool SeeAnomaly;
-    public GameObject TargetObject;
+    public GameObject AnomalyObject;
     public Vector3 lastKnownPlayerPosition;
     public Vector3 AnomalyPosition;
     public Transform[] wayPoints;
@@ -15,6 +15,7 @@ public class Blackboard : MonoBehaviour
     public float PatrolSpeed;
     public float ChasingSpeed;
     public NavMeshAgent _agent;
+    public float _fixDuration;
 
 
 

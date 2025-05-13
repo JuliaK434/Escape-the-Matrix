@@ -7,22 +7,40 @@ using UnityEngine.AI;
 public class GoToanomaly: Leaf
 {
     private Blackboard blackboard;
-    private NavMeshAgent _agent;
     private bool _initialized = false;
+
+    private bool _PrintMessage;
     
     public override NodeResult Execute()
     {
         if (!_initialized)
         {
             blackboard = gameObject.GetComponent<Blackboard>();
-
-            _agent = blackboard._agent;
-
             _initialized = true;
+            _PrintMessage = false;
 
         }
- 
-        _agent.destination = blackboard.AnomalyPosition;
+        if(!_PrintMessage)
+        {
+            Debug.Log("Go To Anomaly");
+            _PrintMessage = true;
+        }
+
+        blackboard._agent.destination = blackboard.AnomalyPosition;
+
+        if (blackboard.SeePlayer)
+        {
+            Debug.Log("In GoToAnomaly: see player");
+            _initialized = false;
+            return NodeResult.success;
+        }
+
+        if(blackboard._agent.remainingDistance <= blackboard.StopDistance)
+        {
+            _initialized = false;
+            return NodeResult.success;
+        }
+
  
         return NodeResult.running;
     }

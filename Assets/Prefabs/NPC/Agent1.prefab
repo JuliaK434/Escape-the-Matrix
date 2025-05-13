@@ -35,6 +35,8 @@ GameObject:
   - component: {fileID: 645541115297292241}
   - component: {fileID: 8357700755490205365}
   - component: {fileID: 5742474526453481624}
+  - component: {fileID: 1659998531454114486}
+  - component: {fileID: 6260659065191928325}
   m_Layer: 0
   m_Name: Agent1
   m_TagString: Untagged
@@ -237,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 5924890806739040988}
+  selectedEditorNode: {fileID: 6423305372087608937}
   repeatOnFinish: 0
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
@@ -256,7 +258,7 @@ MonoBehaviour:
   title: Patrol
   rect:
     serializedVersion: 2
-    x: 980
+    x: 1300
     y: 160
     width: 160
     height: 44
@@ -343,7 +345,6 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   lookDuration: 3
-  rotationSpeed: 90
 --- !u!114 &1010592006041789021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,14 +508,16 @@ MonoBehaviour:
   title: Sequence
   rect:
     serializedVersion: 2
-    x: 780
-    y: 160
+    x: 840
+    y: 140
     width: 160
     height: 44
   parent: {fileID: 4830912541647765866}
   children:
   - {fileID: 5924890806739040988}
   - {fileID: 3431299723400785897}
+  - {fileID: 1659998531454114486}
+  - {fileID: 6260659065191928325}
   - {fileID: 2275573593997816167}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
@@ -535,7 +538,7 @@ MonoBehaviour:
   title: LookAround
   rect:
     serializedVersion: 2
-    x: 940
+    x: 1260
     y: 260
     width: 160
     height: 44
@@ -545,7 +548,6 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   lookDuration: 3
-  rotationSpeed: 90
 --- !u!114 &7706323713290333967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,16 +613,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ViewDistance: 1.5
-  ViewAngel: 120
   PlayerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   AnomalyMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   ObstacleMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
 --- !u!114 &2565431424056031852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,18 +711,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SeePlayer: 0
+  ViewAngle: 150
   SeeAnomaly: 0
-  TargetObject: {fileID: 720719201948942145}
+  AnomalyObject: {fileID: 0}
   lastKnownPlayerPosition: {x: 0, y: 0, z: 0}
   AnomalyPosition: {x: 0, y: 0, z: 0}
   wayPoints:
   - {fileID: 0}
   - {fileID: 0}
   StopDistance: 0.1
-  DetectTime: 1.5
-  PatrolSpeed: 1
-  ChasingSpeed: 1.5
+  DetectTime: 0.4
+  PatrolSpeed: 3.5
+  ChasingSpeed: 4
   _agent: {fileID: 2175125931324280493}
+  _fixDuration: 0
   Patrol: 0
   Detect: 0
   PlayerLose: 0
@@ -738,3 +741,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monoBehaviourTree: {fileID: 8605686763703777525}
+--- !u!114 &1659998531454114486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720719201948942145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17c2eaa7d8001f47b325281c3f766f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: FixAnomaly
+  rect:
+    serializedVersion: 2
+    x: 940
+    y: 260
+    width: 160
+    height: 44
+  parent: {fileID: 6423305372087608937}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &6260659065191928325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720719201948942145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea159375da40fa548bec8871ab3838b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: ResetAnomaly
+  rect:
+    serializedVersion: 2
+    x: 1100
+    y: 260
+    width: 160
+    height: 44
+  parent: {fileID: 6423305372087608937}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
