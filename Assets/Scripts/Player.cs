@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Player: MonoBehaviour 
 {
     public static Player Instance { get; private set; } 
@@ -9,6 +9,18 @@ public class Player: MonoBehaviour
 
     private float minMovingSpeed = 0.1f;
     private bool isRunning = false;
+
+    public Vector3 GetPlayerScreenPosition()
+    {
+        Vector3 playerScreenPosition = Camera.main.WorldToScreenPoint(transform.position);
+        return playerScreenPosition;
+    }
+
+    public bool IsRunning()
+    {
+        return isRunning;
+    }
+
     private void Awake(){
         Instance = this;
         rb = GetComponent<Rigidbody2D>();
@@ -31,14 +43,14 @@ public class Player: MonoBehaviour
             isRunning = false;
         }
     }
-    public bool IsRunning()
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        return isRunning;
+        if(collision.gameObject.tag == "Interactive")
+        {
+            Debug.Log(collision.gameObject);
+            SceneManager.LoadScene(2);
+        }
     }
 
-    public Vector3 GetPlayerScreenPosition()
-    {
-        Vector3 playerScreenPosition = Camera.main.WorldToScreenPoint(transform.position);
-        return playerScreenPosition;
-    }
 }
