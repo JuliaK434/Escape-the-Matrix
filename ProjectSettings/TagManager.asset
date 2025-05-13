@@ -4,17 +4,20 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Interacrive
-  - Interactive
+  - Interactable
+  - Wardrobe
+  - Door
+  - Book
+  - Computer
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Obstacles
+  - 
   - Water
   - UI
-  - Player
-  - Anomaly
+  - 
+  - 
   - 
   - 
   - 
