@@ -13,6 +13,7 @@ TagManager:
   - Computer2
   - Computer3
   - MainComputer
+  - Fire
   layers:
   - Default
   - TransparentFX
