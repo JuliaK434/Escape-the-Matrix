@@ -19,3 +19,5 @@
 *.mdb
 *.opendb
 *.VC.db
+.vs/*
+.vsconfig
