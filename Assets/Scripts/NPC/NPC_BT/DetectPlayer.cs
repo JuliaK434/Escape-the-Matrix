@@ -9,26 +9,26 @@ using System.Collections;
 [MBTNode("Actions/DetectPlayer")]
 public class DetectPlayer : Leaf
 {
-    private Blackboard blackboard;
-    private bool _initialized;
+    private Blackboard _blackboard;
+    private Animator _animator;
     private float timer = 0f;
 
+    public override void OnEnter()
+    {
+        _blackboard = gameObject.GetComponent<Blackboard>();
+        _animator = gameObject.GetComponent<Animator>();
+
+        _animator?.SetBool("isStay", true);
+    }
     public override NodeResult Execute()
     {
-        if (!_initialized)
-        {
-            blackboard = gameObject.GetComponent<Blackboard>();
-            _initialized = true;
-        }
-
-        if (blackboard.SeePlayer)
+        if (_blackboard.SeePlayer)
         {
             timer += Time.deltaTime;
-            if (timer >= blackboard.DetectTime)
+            if (timer >= _blackboard.DetectTime)
             {
-                blackboard.PlayerLose = true;
+                _blackboard.PlayerLose = true;
                 StartCoroutine(RestartAfterDelay(0.5f));
-                Debug.Log("In DetectPlayer, success");
                 return NodeResult.success;
             }
             else
@@ -36,10 +36,8 @@ public class DetectPlayer : Leaf
                 return NodeResult.running;
             }
         }
-
         else
         {
-            Debug.Log("In DetectPlayer, failture");
             timer = 0f;
             return NodeResult.failure;
         }
@@ -47,8 +45,12 @@ public class DetectPlayer : Leaf
     private IEnumerator RestartAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        Debug.Log("In DetectPlayer: Coroutine");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
+    }
+
+    public override void OnExit()
+    {
+        _animator?.SetBool("isStay", false);
     }
 }

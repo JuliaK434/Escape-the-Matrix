@@ -9,6 +9,10 @@ TagManager:
   - Door
   - Book
   - Computer
+  - Computer1
+  - Computer2
+  - Computer3
+  - MainComputer
   layers:
   - Default
   - TransparentFX

@@ -6,42 +6,39 @@ using UnityEngine.AI;
 [MBTNode("Actions/Patrol")]
 public class Patrol: Leaf
 {
-    private bool initialized;
     private Blackboard blackboard;
     private int _currentWaypoint = 0;
     private float _waitTimer = 0f;
     private bool _isWaiting = false;
+    private Animator _animator;
 
-
-    public override NodeResult Execute()
+    public override void OnEnter()
     {
+        blackboard = gameObject.GetComponent<Blackboard>();
+        _animator = gameObject.GetComponent<Animator>();
 
-        if (!initialized)
-        {
-            blackboard = gameObject.GetComponent<Blackboard>();
+        blackboard._agent.destination = blackboard.wayPoints[_currentWaypoint].position;
 
-            blackboard._agent.destination = blackboard.wayPoints[_currentWaypoint].position;
 
-            initialized = true;
-
-        }
+        _animator?.SetBool("isWalk", true);
+    }
+    public override NodeResult Execute()
+    { 
 
         if(blackboard.wayPoints.Length == 0)
         {
-            Debug.Log("Error in Patrol, Add way points");
             return NodeResult.failure;
         }
 
         if(blackboard.SeePlayer || blackboard.SeeAnomaly)
         {
-            Debug.Log("In Patrol: failure: saw player");
             return NodeResult.failure;
         }
 
         if (_isWaiting)
         {
             _waitTimer += Time.deltaTime;
-            if (_waitTimer >= 2f) 
+            if (_waitTimer >= 1.5f) 
             {
                 _isWaiting = false;
                 _waitTimer = 0f;
@@ -49,7 +46,6 @@ public class Patrol: Leaf
                 _currentWaypoint = (_currentWaypoint + 1) % blackboard.wayPoints.Length;
                 blackboard._agent.destination = blackboard.wayPoints[_currentWaypoint].position;
 
-                Debug.Log("In Patrol");
                 return NodeResult.success;
             }
             return NodeResult.running;
@@ -64,4 +60,8 @@ public class Patrol: Leaf
         return NodeResult.running;
     }
 
+    public override void OnExit()
+    {
+        _animator?.SetBool("isWalk", false);
+    }
 }

@@ -7,17 +7,16 @@ using UnityEngine.AI;
 public class ResetChasing: Leaf
 {
     private Blackboard _blackboard;
-    private bool _initialized;
+    private Animator _animator;
+    public override void OnEnter()
+    {
+        _blackboard = gameObject.GetComponent<Blackboard>();
+        _animator = gameObject.GetComponent<Animator>();
 
+        _animator.SetBool("isStay", true);
+    }
     public override NodeResult Execute()
     {
-        Debug.Log("In ResetChasing");
-        if (!_initialized)
-        {
-            _blackboard = gameObject.GetComponent<Blackboard>();
-            _initialized = true;
-        }
-
         if(_blackboard._agent != null)
         {
             _blackboard._agent.speed = _blackboard.PatrolSpeed;

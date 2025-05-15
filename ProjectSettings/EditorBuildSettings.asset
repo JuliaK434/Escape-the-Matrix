@@ -42,6 +42,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level3/Level3_AfterFredge.unity
     guid: 9cff4e1b20a559f41a348e39de688b8a
   - enabled: 1
+    path: Assets/Scenes/Office.unity
+    guid: a6cf3c0ecb72b274c98c3ad39804a81a
+  - enabled: 1
+    path: Assets/Scenes/Office1.unity
+    guid: fa10442c6455c194289a92bf644a1de4
+  - enabled: 1
     path: Assets/Scenes/ChooseLevel.unity
     guid: e9521dbb95bb4f44582afd944a8a27d3
   m_configObjects:

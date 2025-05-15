@@ -6,20 +6,27 @@ using UnityEngine;
 public class WasChasing : Leaf
 {
     private Blackboard _blackboard;
-    private bool _initialized;
+    private Animator _animator;
 
+    public override void OnEnter()
+    {
+        _blackboard = gameObject.GetComponent<Blackboard>();
+        _animator = gameObject.GetComponent<Animator>();
+        _animator?.SetBool("isStay", true);
+    }
     public override NodeResult Execute()
     {
-        Debug.Log("In WasChasing");
-        if (!_initialized)
-        {
-            _blackboard = gameObject.GetComponent<Blackboard>();
-        }
 
         if(_blackboard.SeePlayer == false && _blackboard.lastKnownPlayerPosition != Vector3.zero)
         {
+
             return NodeResult.success;
         }
         return NodeResult.failure;
+    }
+
+    public override void OnExit()
+    {
+        _animator?.SetBool("isStay", false);
     }
 }

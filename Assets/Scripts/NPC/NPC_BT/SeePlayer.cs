@@ -4,18 +4,18 @@ using MBT;
 [MBTNode("Conditions/SeePlayer")]
 public class SeePlayer : Leaf
 {
-    private Blackboard blackboard;
-    private bool initialized;
+    private Blackboard _blackboard;
+    private Animator _animator;
+
+    public override void OnEnter()
+    {
+        _blackboard = gameObject.GetComponent<Blackboard>();
+        _animator = gameObject.GetComponent<Animator>();
+    }
 
     public override NodeResult Execute()
     {
-        Debug.Log("in SeePlayer");
-        if (!initialized)
-        {
-            blackboard = gameObject.GetComponent<Blackboard>();
-        }
-
-        return blackboard.SeePlayer ? NodeResult.success : NodeResult.failure;
+        return _blackboard.SeePlayer ? NodeResult.success : NodeResult.failure;
     }
 
 }

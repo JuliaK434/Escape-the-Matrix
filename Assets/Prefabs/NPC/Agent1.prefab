@@ -30,13 +30,14 @@ GameObject:
   - component: {fileID: 7706323713290333967}
   - component: {fileID: 7120111309388301876}
   - component: {fileID: 7450184230763975494}
-  - component: {fileID: 2565431424056031852}
   - component: {fileID: 2201654053932334427}
-  - component: {fileID: 645541115297292241}
   - component: {fileID: 8357700755490205365}
   - component: {fileID: 5742474526453481624}
   - component: {fileID: 1659998531454114486}
   - component: {fileID: 6260659065191928325}
+  - component: {fileID: 5075824547868137130}
+  - component: {fileID: 511734842841083799}
+  - component: {fileID: 1663774926375987253}
   m_Layer: 0
   m_Name: Agent1
   m_TagString: Untagged
@@ -144,7 +145,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720719201948942145}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: cb475039ea56f314f8e68b7955ca31bc, type: 2}
   m_CullingMode: 0
@@ -239,8 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 6423305372087608937}
-  repeatOnFinish: 0
+  selectedEditorNode: {fileID: 2201654053932334427}
+  repeatOnFinish: 1
   maxExecutionsPerTick: 1000
   parent: {fileID: 0}
 --- !u!114 &1710439491694378767
@@ -258,8 +259,8 @@ MonoBehaviour:
   title: Patrol
   rect:
     serializedVersion: 2
-    x: 1300
-    y: 160
+    x: 1040
+    y: 100
     width: 160
     height: 44
   parent: {fileID: 4830912541647765866}
@@ -282,11 +283,11 @@ MonoBehaviour:
   title: Selector
   rect:
     serializedVersion: 2
-    x: 580
-    y: 20
+    x: 460
+    y: -40
     width: 160
     height: 44
-  parent: {fileID: 0}
+  parent: {fileID: 2201654053932334427}
   children:
   - {fileID: 3088838107884681819}
   - {fileID: 7706323713290333967}
@@ -311,8 +312,8 @@ MonoBehaviour:
   title: GoToAnomaly
   rect:
     serializedVersion: 2
-    x: 780
-    y: 260
+    x: 781.3333
+    y: 259.33334
     width: 160
     height: 44
   parent: {fileID: 6423305372087608937}
@@ -335,8 +336,8 @@ MonoBehaviour:
   title: LookAround
   rect:
     serializedVersion: 2
-    x: 560
-    y: 340
+    x: 561.3333
+    y: 340.6667
     width: 160
     height: 44
   parent: {fileID: 7706323713290333967}
@@ -360,7 +361,7 @@ MonoBehaviour:
   title: GoToPlayer
   rect:
     serializedVersion: 2
-    x: 203.33337
+    x: 200
     y: 220
     width: 160
     height: 44
@@ -384,7 +385,7 @@ MonoBehaviour:
   title: SeeAnomaly
   rect:
     serializedVersion: 2
-    x: 620
+    x: 619.3333
     y: 260
     width: 160
     height: 44
@@ -408,8 +409,8 @@ MonoBehaviour:
   title: DetectPlayer
   rect:
     serializedVersion: 2
-    x: 44
-    y: 220
+    x: 40
+    y: 219.33334
     width: 160
     height: 44
   parent: {fileID: 3088838107884681819}
@@ -432,7 +433,7 @@ MonoBehaviour:
   title: SeePlayer
   rect:
     serializedVersion: 2
-    x: -118.66669
+    x: -120
     y: 220
     width: 160
     height: 44
@@ -456,8 +457,8 @@ MonoBehaviour:
   title: Sequence
   rect:
     serializedVersion: 2
-    x: 40
-    y: 120
+    x: 40.666656
+    y: 100
     width: 160
     height: 44
   parent: {fileID: 4830912541647765866}
@@ -508,8 +509,8 @@ MonoBehaviour:
   title: Sequence
   rect:
     serializedVersion: 2
-    x: 840
-    y: 140
+    x: 841.3334
+    y: 100
     width: 160
     height: 44
   parent: {fileID: 4830912541647765866}
@@ -538,8 +539,8 @@ MonoBehaviour:
   title: LookAround
   rect:
     serializedVersion: 2
-    x: 1260
-    y: 260
+    x: 1280
+    y: 253.33331
     width: 160
     height: 44
   parent: {fileID: 6423305372087608937}
@@ -563,8 +564,8 @@ MonoBehaviour:
   title: Sequence
   rect:
     serializedVersion: 2
-    x: 400
-    y: 160
+    x: 420
+    y: 100
     width: 160
     height: 44
   parent: {fileID: 4830912541647765866}
@@ -612,43 +613,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250270e80aab8434f808a03b1a2ef494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ViewDistance: 1.5
+  ViewDistance: 3
   PlayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   AnomalyMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   ObstacleMask:
     serializedVersion: 2
-    m_Bits: 0
---- !u!114 &2565431424056031852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720719201948942145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c78c7da6b00e1b46bad07949050f82f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: Sequence
-  rect:
-    serializedVersion: 2
-    x: 460
-    y: -102.66666
-    width: 160
-    height: 44
-  parent: {fileID: 2201654053932334427}
-  children:
-  - {fileID: 645541115297292241}
-  - {fileID: 4830912541647765866}
-  behaviourTree: {fileID: 0}
-  runtimePriority: 0
-  breakpoint: 0
-  random: 0
+    m_Bits: 256
 --- !u!114 &2201654053932334427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,36 +639,12 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 460
-    y: -204.66669
+    y: -120
     width: 160
     height: 44
   parent: {fileID: 0}
   children:
-  - {fileID: 2565431424056031852}
-  behaviourTree: {fileID: 0}
-  runtimePriority: 0
-  breakpoint: 0
---- !u!114 &645541115297292241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720719201948942145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c87759b027e7e8d4aa79690d259923aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: InitNavMeshAgent
-  rect:
-    serializedVersion: 2
-    x: 340
-    y: 22
-    width: 160
-    height: 44
-  parent: {fileID: 2565431424056031852}
-  children: []
+  - {fileID: 4830912541647765866}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -724,7 +674,7 @@ MonoBehaviour:
   PatrolSpeed: 3.5
   ChasingSpeed: 4
   _agent: {fileID: 2175125931324280493}
-  _fixDuration: 0
+  _fixDuration: 1
   Patrol: 0
   Detect: 0
   PlayerLose: 0
@@ -789,3 +739,63 @@ MonoBehaviour:
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
+--- !u!114 &5075824547868137130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720719201948942145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea159375da40fa548bec8871ab3838b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: ResetAnomaly
+  rect:
+    serializedVersion: 2
+    x: 1100
+    y: 260
+    width: 160
+    height: 44
+  parent: {fileID: 6423305372087608937}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &511734842841083799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720719201948942145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17c2eaa7d8001f47b325281c3f766f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: FixAnomaly
+  rect:
+    serializedVersion: 2
+    x: 940
+    y: 260
+    width: 160
+    height: 44
+  parent: {fileID: 6423305372087608937}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+--- !u!114 &1663774926375987253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720719201948942145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878c4e6c0a5c0ca47999e73f4a795d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

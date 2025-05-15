@@ -4,17 +4,24 @@ using MBT;
 [MBTNode("Conditions/SeeAnomaly")]
 public class SeeAnomaly : Leaf
 {
-    private Blackboard blackboard;
-    private bool _initialized;
+    private Blackboard _blackboard;
+    private Animator _animator;
+
+    public override void OnEnter()
+    {
+        _blackboard = gameObject.GetComponent<Blackboard>();
+        _animator = gameObject.GetComponent<Animator>();
+        _animator?.SetBool("isStay", true);
+    }
 
     public override NodeResult Execute()
     {
-        if (!_initialized)
-        {
-            blackboard = gameObject.GetComponent<Blackboard>();
-        }
+        return _blackboard.SeeAnomaly ? NodeResult.success : NodeResult.failure;
+    }
 
-        return blackboard.SeeAnomaly ? NodeResult.success : NodeResult.failure;
+    public override void OnExit()
+    {
+        _animator?.SetBool("isStay", false);
     }
 
 }

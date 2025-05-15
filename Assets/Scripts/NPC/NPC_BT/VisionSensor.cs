@@ -1,7 +1,8 @@
+using Unity.VisualScripting;
 using UnityEngine;
 public class VisionSensor : MonoBehaviour
 {
-    public float ViewDistance = 10f;
+    public float ViewDistance = 5f;
    
     public LayerMask PlayerMask;
     public LayerMask AnomalyMask;
@@ -9,11 +10,8 @@ public class VisionSensor : MonoBehaviour
 
 
     private Blackboard blackboard;
-    private bool SeeItem;
     private Collider2D _PlayerCollider;
     private Collider2D _AnomalyCollider;
-
-    private bool SeeFlag;
     void Start()
     {
         blackboard = gameObject.GetComponent<Blackboard>();
@@ -22,7 +20,7 @@ public class VisionSensor : MonoBehaviour
 
     void Update()
     {
-       _PlayerCollider = DetectItem(PlayerMask);
+        _PlayerCollider = DetectItem(PlayerMask);
        _AnomalyCollider = DetectItem(AnomalyMask);
 
         if (_AnomalyCollider != null)
@@ -33,9 +31,6 @@ public class VisionSensor : MonoBehaviour
         }
         if (_PlayerCollider != null)
         {
-            if(!SeeFlag)
-                Debug.Log("VisionSensor: See palyer");
-            SeeFlag = true;
             blackboard.lastKnownPlayerPosition = _PlayerCollider.transform.position;
             blackboard.SeePlayer = true;
         }
@@ -43,19 +38,24 @@ public class VisionSensor : MonoBehaviour
         {
             blackboard.SeePlayer = false;
 
-            if (SeeFlag)
-                Debug.Log("VisionSensor: Dont see palyer");
-            SeeFlag = false;
         }
 
     }
     Collider2D DetectItem(LayerMask ItemMask) 
     {
-        Collider2D target = Physics2D.OverlapCircle(transform.position, ViewDistance, ItemMask);
+        //Debug.Log(ViewDistance);
 
+        Collider2D target = Physics2D.OverlapCircle(transform.position, ViewDistance, ItemMask);
         if (target != null)
         {
             Vector2 dirToTarget = (target.transform.position - transform.position).normalized;
+
+            float distanceToTarget = Mathf.Abs(Vector2.Distance(target.transform.position, transform.position));
+            if (distanceToTarget < ViewDistance) 
+            {
+                ViewDistance = distanceToTarget;
+            }
+
             float angleToTarget = Vector2.Angle(transform.right, dirToTarget);
 
             if (angleToTarget < blackboard.ViewAngle / 2)
@@ -65,7 +65,16 @@ public class VisionSensor : MonoBehaviour
                 {
                     return target;
                 }
+                else
+                {
+                  //  Debug.Log(hit.collider.gameObject);
+                }
             }
+        }
+
+        else
+        {
+            ViewDistance = 5f;
         }
 
         return null;
