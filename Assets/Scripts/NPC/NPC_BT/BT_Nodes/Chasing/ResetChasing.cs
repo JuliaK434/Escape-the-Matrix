@@ -11,9 +11,6 @@ public class ResetChasing: Leaf
     public override void OnEnter()
     {
         _blackboard = gameObject.GetComponent<Blackboard>();
-        _animator = gameObject.GetComponent<Animator>();
-
-        _animator.SetBool("isStay", true);
     }
     public override NodeResult Execute()
     {

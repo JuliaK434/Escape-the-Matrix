@@ -10,17 +10,11 @@ public class Patrol: Leaf
     private int _currentWaypoint = 0;
     private float _waitTimer = 0f;
     private bool _isWaiting = false;
-    private Animator _animator;
-
     public override void OnEnter()
     {
         blackboard = gameObject.GetComponent<Blackboard>();
-        _animator = gameObject.GetComponent<Animator>();
-
         blackboard._agent.destination = blackboard.wayPoints[_currentWaypoint].position;
-
-
-        _animator?.SetBool("isWalk", true);
+        blackboard.isWalk = true;
     }
     public override NodeResult Execute()
     { 
@@ -32,6 +26,7 @@ public class Patrol: Leaf
 
         if(blackboard.SeePlayer || blackboard.SeeAnomaly)
         {
+            
             return NodeResult.failure;
         }
 
@@ -41,6 +36,7 @@ public class Patrol: Leaf
             if (_waitTimer >= 1.5f) 
             {
                 _isWaiting = false;
+                blackboard.isWalk = true; 
                 _waitTimer = 0f;
 
                 _currentWaypoint = (_currentWaypoint + 1) % blackboard.wayPoints.Length;
@@ -53,7 +49,9 @@ public class Patrol: Leaf
 
         if (!blackboard._agent.pathPending && blackboard._agent.remainingDistance <= blackboard.StopDistance)
         {
-            _isWaiting = true; 
+            _isWaiting = true;
+            blackboard.isWalk = false;
+            blackboard.isStay = true;
             return NodeResult.running;
         }
 
@@ -62,6 +60,7 @@ public class Patrol: Leaf
 
     public override void OnExit()
     {
-        _animator?.SetBool("isWalk", false);
+        blackboard.isWalk = false;
+        blackboard.isStay = false;
     }
 }

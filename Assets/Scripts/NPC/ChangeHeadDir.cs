@@ -13,7 +13,7 @@ public class ChangeHeadDir: MonoBehaviour
     {
         if (_agent != null)
         {
-            if (_agent.destination.x < _agent.transform.position.x)
+            if (_agent.destination.x <= _agent.transform.position.x)
             {
                 transform.rotation = Quaternion.Euler(0, -180, 0);
             }

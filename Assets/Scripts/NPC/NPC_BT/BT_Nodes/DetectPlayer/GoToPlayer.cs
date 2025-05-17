@@ -7,14 +7,11 @@ using UnityEngine.AI;
 public class GoToPLayer : Leaf
 {
     private Blackboard blackboard;
-    private Animator _animator;
 
     public override void OnEnter()
     {
         blackboard = gameObject.GetComponent<Blackboard>();
-        _animator = gameObject.GetComponent<Animator>();
-
-        _animator?.SetBool("isChase", true);
+        blackboard.isChase = true;
     }
     public override NodeResult Execute()
     {
@@ -36,7 +33,7 @@ public class GoToPLayer : Leaf
 
     public override void OnExit()
     {
-        _animator?.SetBool("isChase", false);
+        blackboard.isChase = false;
     }
 
 }

@@ -5,24 +5,36 @@ using UnityEngine;
 public class EnemyAnimation : MonoBehaviour
 {
     private Animator _animator;
-    
-
-    private const string Boost = "Boost";
-    private const string OnFollow = "OnFollow";
-    private const string OnPatrol = "OnPatrol";
-    private const string OnPlayerLose = "OnPlayerLose";
-    //private string OnIdle = "OnIdle";
     private Blackboard _blackboard;
     void Start()
     {
-        _animator = GetComponent<Animator>();
+        _animator = gameObject.GetComponent<Animator>();
+        _blackboard = gameObject.GetComponent<Blackboard>();
     }
 
     void Update()
     {
+      /*  if (_blackboard.isWalk)
+            Debug.Log("isWalk");
+        if (_blackboard.isFix)
+            Debug.Log("isFix");
+        if (_blackboard.isChase)
+            Debug.Log("isChase");
+        if (_blackboard.isHappy)
+            Debug.Log("isHappy");
+        if (_blackboard.isAngry)
+            Debug.Log("isAngry");
+        if (_blackboard.isUse)
+            Debug.Log("isUse");
+      */
 
-        _animator.SetBool(OnPlayerLose, _blackboard.PlayerLose);
-      
+        _animator.SetBool("isWalk", _blackboard.isWalk);
+        _animator.SetBool("isFix", _blackboard.isFix);
+        _animator.SetBool("isChase", _blackboard.isChase);
+        _animator.SetBool("isHappy", _blackboard.isHappy);
+        _animator.SetBool("isAngry", _blackboard.isAngry);
+        _animator.SetBool("isStay", _blackboard.isStay);
+        _animator.SetBool("isUse", _blackboard.isUse);
 
     }
 }

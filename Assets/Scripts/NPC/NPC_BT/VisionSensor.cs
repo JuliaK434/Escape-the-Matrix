@@ -28,6 +28,7 @@ public class VisionSensor : MonoBehaviour
             blackboard.AnomalyPosition = _AnomalyCollider.transform.position;
             blackboard.SeeAnomaly = true;
             blackboard.AnomalyObject = _AnomalyCollider.gameObject;
+            //Debug.Log(blackboard.AnomalyObject.name == "Fire");
         }
         if (_PlayerCollider != null)
         {

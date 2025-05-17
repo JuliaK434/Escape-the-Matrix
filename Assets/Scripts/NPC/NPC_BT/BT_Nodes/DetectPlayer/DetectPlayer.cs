@@ -10,15 +10,11 @@ using System.Collections;
 public class DetectPlayer : Leaf
 {
     private Blackboard _blackboard;
-    private Animator _animator;
     private float timer = 0f;
 
     public override void OnEnter()
     {
         _blackboard = gameObject.GetComponent<Blackboard>();
-        _animator = gameObject.GetComponent<Animator>();
-
-        _animator?.SetBool("isStay", true);
     }
     public override NodeResult Execute()
     {
@@ -27,7 +23,6 @@ public class DetectPlayer : Leaf
             timer += Time.deltaTime;
             if (timer >= _blackboard.DetectTime)
             {
-                _blackboard.PlayerLose = true;
                 StartCoroutine(RestartAfterDelay(0.5f));
                 return NodeResult.success;
             }
@@ -47,10 +42,5 @@ public class DetectPlayer : Leaf
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-    }
-
-    public override void OnExit()
-    {
-        _animator?.SetBool("isStay", false);
     }
 }

@@ -6,16 +6,16 @@ using MBT;
 public class FixAnomaly : Leaf
 {
     private Blackboard _blackboard;
-    private Animator _animator;
-    private float _fixTimer = 0f;
+    private float _timer;
+    private bool _animationPlay;
 
     public override void OnEnter()
     {
-        _fixTimer = 0f;
+        _timer = Time.time;
+        _animationPlay = false;
         _blackboard = gameObject.GetComponent<Blackboard>();
-        _animator = gameObject.GetComponent<Animator>();
+        _blackboard.isFix = true;
 
-        _animator?.SetBool("isFix", true);
     }
     public override NodeResult Execute()
     {
@@ -24,17 +24,25 @@ public class FixAnomaly : Leaf
             _blackboard.SeePlayer = false;
             _blackboard.lastKnownPlayerPosition = Vector3.zero;
         }
-        _fixTimer += Time.deltaTime;
-        if(_fixTimer >= _blackboard._fixDuration)
+
+        if (!_animationPlay)
         {
-            return NodeResult.success;
+            _animationPlay = true;
+            _blackboard.isFix = true;
+            _timer = Time.time;
         }
-        return NodeResult.running;
+
+        if(Time.time - _timer < _blackboard._fixDuration)
+        {
+            return NodeResult.running;
+        }
+        _blackboard.isFix = false;
+        return NodeResult.success;
     }
 
     public override void OnExit()
     {
-        _animator?.SetBool("isFix", false);
+        _blackboard.isFix = false;
     }
 }
 

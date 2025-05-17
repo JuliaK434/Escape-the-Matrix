@@ -1,30 +1,26 @@
 using UnityEngine;
 using MBT;
+using System.Collections;
 [AddComponentMenu("")]
 [MBTNode("Actions/LookAround")]
 public class LookAround : Leaf
 {
     private float _startTime;
     private Blackboard _blackboard;
-    private Animator _animator;
-    public float lookDuration = 4f;
     private float _bViewAngle;
 
     public override void OnEnter()
     {
         _startTime = Time.time;
         _blackboard = gameObject.GetComponent<Blackboard>();
-        _animator = gameObject.GetComponent<Animator>();
         _bViewAngle = _blackboard.ViewAngle;
         _blackboard.ViewAngle = 360f; 
-
-        _animator.SetBool("isStay", true);
     }
     public override NodeResult Execute()
     { 
         if (_blackboard.SeePlayer)
         {
-            Debug.Log("SeePlayer");
+            RestartAfterDelay(0.5f);
             return NodeResult.success; 
         }
 
@@ -33,14 +29,8 @@ public class LookAround : Leaf
             return NodeResult.failure;
         }
 
-       // if(Time.time - _startTime >= lookDuration / 2)
-        //{
-        //    transform.rotation = Quaternion.Euler(0, -180, 0);
-        //}
-
-        if (Time.time - _startTime >= lookDuration)
+        if (Time.time - _startTime >= _blackboard.LookAroundTime)
         {
-            //transform.rotation = Quaternion.Euler(0, 0, 0);
             return NodeResult.success;
         }
 
@@ -49,7 +39,10 @@ public class LookAround : Leaf
 
     public override void OnExit()
     {
-        _animator?.SetBool("isStay", false);
         _blackboard.ViewAngle = _bViewAngle;
+    }
+    private IEnumerator RestartAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
     }
 }
