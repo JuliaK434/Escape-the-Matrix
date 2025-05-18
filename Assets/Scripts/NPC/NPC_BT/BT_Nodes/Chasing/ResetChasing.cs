@@ -7,7 +7,6 @@ using UnityEngine.AI;
 public class ResetChasing: Leaf
 {
     private Blackboard _blackboard;
-    private Animator _animator;
     public override void OnEnter()
     {
         _blackboard = gameObject.GetComponent<Blackboard>();

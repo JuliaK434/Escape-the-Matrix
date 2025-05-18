@@ -13,7 +13,7 @@ public class PlayerInteractionOffice1 : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Wardrobe"))
+        if (other.CompareTag("Wardrobe") || other.CompareTag("Book"))
         {
             if (Input.GetKeyDown(interactionKey))
             {
@@ -64,7 +64,7 @@ public class PlayerInteractionOffice1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Wardrobe"))
+        if (other.CompareTag("Wardrobe") || other.CompareTag("Book"))
         {
             _currentWardrobe = other.GetComponent<WardrobeTrigger>();
            // Debug.Log(_currentWardrobe);
@@ -73,7 +73,7 @@ public class PlayerInteractionOffice1 : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Wardrobe"))
+        if (other.CompareTag("Wardrobe") || other.CompareTag("Book"))
         {
             _currentWardrobe = null;
         }

@@ -7,7 +7,7 @@ public class Task1Manager : MonoBehaviour
     public GameObject puzzleUI;
     public TextMeshProUGUI hintText;
     private bool _isComputerAvailable;
-
+    public static event System.Action Task1Success;
     public static Task1Manager Instance; //SingleTone Pattern
 
     private void Awake()
@@ -60,6 +60,7 @@ public class Task1Manager : MonoBehaviour
 
         if (answer.Contains("1ew324dqegcw"))
         {
+            Task1Success?.Invoke();
             CloseComputer();
         }
         else

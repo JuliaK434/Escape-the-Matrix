@@ -15,6 +15,7 @@ public class DetectPlayer : Leaf
     public override void OnEnter()
     {
         _blackboard = gameObject.GetComponent<Blackboard>();
+        timer = 0f;
     }
     public override NodeResult Execute()
     {

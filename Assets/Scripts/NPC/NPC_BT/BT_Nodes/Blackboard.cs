@@ -17,6 +17,7 @@ public class Blackboard : MonoBehaviour
     public float StopDistance;
     public float LookAroundTime = 2f;
     public float DetectTime;
+    public float ForgetTime;
     public float PatrolSpeed;
     public float ChasingSpeed;
     public NavMeshAgent _agent;

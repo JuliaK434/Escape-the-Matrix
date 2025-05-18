@@ -46,5 +46,9 @@ public class Player: MonoBehaviour
     {
         return Camera.main.WorldToScreenPoint(transform.position);
     }
+    public void OnDisable()
+    {
+        Destroy(Player.Instance);
+    }
 }
 

@@ -7,6 +7,7 @@ public class RoomVisibility : MonoBehaviour
     void Start()
     {
         _room.SetActive(false);
+        GetComponent<BoxCollider2D>().isTrigger = false;
     }
     void Update()
     {

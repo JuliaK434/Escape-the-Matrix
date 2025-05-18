@@ -19,8 +19,10 @@ public class Mover : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, _targetPosition, _speed * Time.deltaTime);
         if (Vector3.Distance(transform.position, _targetPosition) < 0.01f)
         {
+
             transform.position = _targetPosition;
             _moving = false;
+
         }
     }
 }
