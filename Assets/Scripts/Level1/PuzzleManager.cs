@@ -71,6 +71,8 @@ public class PuzzleManager : MonoBehaviour
             {
                 Debug.LogError("Exit door reference not set!", this);
             }
+            AchievementManager.Instance.UnlockAchievement("Achievement2");
+            Debug.Log("Achievement2 разблокирован!"); 
         }
         else
         {

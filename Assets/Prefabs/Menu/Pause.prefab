@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1767415465541936616}
   - component: {fileID: 5215312154754435826}
+  - component: {fileID: 6661930770332046259}
   m_Layer: 0
   m_Name: Pause
   m_TagString: Untagged
@@ -45,3 +46,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 0}
+--- !u!114 &6661930770332046259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7236091853312220128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea087a9a9cbc28d41b6417e94eb9c50b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievementPanel: {fileID: 0}

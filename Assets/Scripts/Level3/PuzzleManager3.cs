@@ -67,6 +67,8 @@ public class PuzzleManager3 : MonoBehaviour
             {
                 exitDoor.UnlockDoor();
             }
+            AchievementManager.Instance.UnlockAchievement("Achievement7");
+            Debug.Log("Achievement7 разблокирован!");
         }
         else
         {
