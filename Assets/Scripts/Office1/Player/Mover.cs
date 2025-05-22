@@ -5,7 +5,6 @@ public class Mover : MonoBehaviour
     private Vector3 _targetPosition;
     private float _speed;
     private bool _moving = false;
-
     public void Initialize(Vector3 target, float moveSpeed)
     {
         _targetPosition = target;
@@ -19,7 +18,7 @@ public class Mover : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, _targetPosition, _speed * Time.deltaTime);
         if (Vector3.Distance(transform.position, _targetPosition) < 0.01f)
         {
-
+            gameObject.GetComponent<BoxCollider2D>().enabled = true;
             transform.position = _targetPosition;
             _moving = false;
 

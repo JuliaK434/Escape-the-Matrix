@@ -61,6 +61,7 @@ public class Task1Manager : MonoBehaviour
         if (answer.Contains("1ew324dqegcw"))
         {
             Task1Success?.Invoke();
+
             CloseComputer();
         }
         else

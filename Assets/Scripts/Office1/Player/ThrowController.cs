@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ThrowController : MonoBehaviour
 {
-    public GameObject _throwObject;   
+    public GameObject _throwObject; 
     public float throwSpeed = 10f;          
     public float maxThrowDistance = 10f;   
     public LayerMask obstacleMask;
@@ -24,7 +24,6 @@ public class ThrowController : MonoBehaviour
     {
         if (_hasBottle)
         {
-            //Debug.Log(_throwObject);
             if (Input.GetMouseButtonDown(0))
             {
                 _throwObject.SetActive(true);
@@ -52,10 +51,8 @@ public class ThrowController : MonoBehaviour
 
                 thrownObject.AddComponent<Mover>().Initialize(mouseWorldPos, throwSpeed);
                 _hasBottle = false;
-
             }
         }
 
     }
-
 }

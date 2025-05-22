@@ -23,7 +23,7 @@ public class GoToanomaly: Leaf
         {
             if (blackboard.SeePlayer)
             {
-                return NodeResult.success; //?????
+                return NodeResult.success; 
             }
 
             if (blackboard._agent.remainingDistance <= blackboard.StopDistance)

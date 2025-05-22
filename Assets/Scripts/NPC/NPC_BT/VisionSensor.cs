@@ -1,4 +1,5 @@
-using Unity.VisualScripting;
+using System.Collections;
+using Unity.Hierarchy;
 using UnityEngine;
 public class VisionSensor : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class VisionSensor : MonoBehaviour
     public LayerMask PlayerMask;
     public LayerMask AnomalyMask;
     public LayerMask ObstacleMask;
-
+    public float updateFrequency;
 
     private Blackboard blackboard;
     private Collider2D _PlayerCollider;
@@ -15,30 +16,34 @@ public class VisionSensor : MonoBehaviour
     void Start()
     {
         blackboard = gameObject.GetComponent<Blackboard>();
-
+        StartCoroutine(VisionRoutine());
     }
 
-    void Update()
+    IEnumerator VisionRoutine()
     {
-        _PlayerCollider = DetectItem(PlayerMask);
-       _AnomalyCollider = DetectItem(AnomalyMask);
+        while (true)
+        {
+            _PlayerCollider = DetectItem(PlayerMask);
+            _AnomalyCollider = DetectItem(AnomalyMask);
 
-        if (_AnomalyCollider != null)
-        {
-            blackboard.AnomalyPosition = _AnomalyCollider.transform.position;
-            blackboard.SeeAnomaly = true;
-            blackboard.AnomalyObject = _AnomalyCollider.gameObject;
-            //Debug.Log(blackboard.AnomalyObject.name == "Fire");
-        }
-        if (_PlayerCollider != null)
-        {
-            blackboard.lastKnownPlayerPosition = _PlayerCollider.transform.position;
-            blackboard.SeePlayer = true;
-        }
-        else
-        {
-            blackboard.SeePlayer = false;
+            if (_AnomalyCollider != null)
+            {
+                blackboard.AnomalyPosition = _AnomalyCollider.transform.position;
+                blackboard.SeeAnomaly = true;
+                blackboard.AnomalyObject = _AnomalyCollider.gameObject;
+                //Debug.Log(blackboard.AnomalyObject.name == "Fire");
+            }
+            if (_PlayerCollider != null)
+            {
+                blackboard.lastKnownPlayerPosition = _PlayerCollider.transform.position;
+                blackboard.SeePlayer = true;
+            }
+            else
+            {
+                blackboard.SeePlayer = false;
 
+            }
+            yield return new WaitForSeconds(updateFrequency);
         }
 
     }
@@ -52,32 +57,35 @@ public class VisionSensor : MonoBehaviour
             Vector2 dirToTarget = (target.transform.position - transform.position).normalized;
 
             float distanceToTarget = Mathf.Abs(Vector2.Distance(target.transform.position, transform.position));
-            if (distanceToTarget < ViewDistance) 
-            {
-                ViewDistance = distanceToTarget;
-            }
-
             float angleToTarget = Vector2.Angle(transform.right, dirToTarget);
 
             if (angleToTarget < blackboard.ViewAngle / 2)
             {
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, dirToTarget, ViewDistance, ObstacleMask);
-                if (hit.collider == null)
+                Debug.DrawRay(transform.position, dirToTarget *distanceToTarget, Color.red, 1f);
+                RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, dirToTarget, distanceToTarget, ObstacleMask | ItemMask);
+                if (hits.Length > 0)
                 {
-                    return target;
-                }
-                else
-                {
-                  //  Debug.Log(hit.collider.gameObject);
+                    RaycastHit2D hit = hits[0];
+                    if(hit.collider is CircleCollider2D)
+                    {
+                        if(hits.Length > 1)
+                        {
+                            hit = hits[1];
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+
+                    //Debug.Log(hit.collider is BoxCollider2D);
+                    if (((1 << hit.collider.gameObject.layer) & ItemMask) != 0)
+                        return hit.collider;
+                    if (((1 << hit.collider.gameObject.layer) & ObstacleMask) != 0)
+                        return null;
                 }
             }
         }
-
-        else
-        {
-            ViewDistance = 5f;
-        }
-
         return null;
     }
 }

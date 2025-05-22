@@ -8,7 +8,7 @@ public class ActivateButton: Leaf
 
 {
     private float _timer;
-    private float _animationTime = 2f;
+    private float _animationTime = 1.05f;
     private bool _animationPlay;
     private Blackboard _blackboard;
     public override void OnEnter()

@@ -21,8 +21,8 @@ public class FixAnomaly : Leaf
     {
         if (_blackboard.SeePlayer)
         {
-            _blackboard.SeePlayer = false;
-            _blackboard.lastKnownPlayerPosition = Vector3.zero;
+            //_blackboard.SeePlayer = false;
+            //_blackboard.lastKnownPlayerPosition = Vector3.zero;
         }
 
         if (!_animationPlay)
