@@ -24,7 +24,8 @@ public class SceneSwitchManager : MonoBehaviour
         if (computerSwitch != null && !computerSwitch.IsComputerOn())
         {
             // Если компьютер выключен - переключаем сцену
-            SceneManager.LoadScene("Level2_HomeAfterComputer"); // Замените на имя вашей сцены
+            SceneManager.LoadScene("Level2_HomeAfterComputer"); 
+            AchievementManager.Instance.UnlockAchievement("Achievement5");
         }
         else
         {

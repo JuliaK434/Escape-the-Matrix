@@ -37,6 +37,7 @@ public class StarManager : MonoBehaviour
     {
         if (collectedStars >= totalStars)
         {
+            AchievementManager.Instance.UnlockAchievement("Achievement3");
             exitDoor.SetActive(true); // Активируем выход
             exitHintText.gameObject.SetActive(true); // Показываем подсказку
             Debug.Log("Все звёзды собраны! Выход открыт.");

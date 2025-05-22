@@ -16,6 +16,7 @@ public class ExitDoor : MonoBehaviour
             {
                 exitHintText.gameObject.SetActive(false);
                 SceneManager.LoadScene("Level3_Fredge");
+                AchievementManager.Instance.UnlockAchievement("Achievement3");
             }
             else
             {

@@ -53,5 +53,7 @@ public class FoodSelectionManager : MonoBehaviour
     private void LoadMainScene()
     {
         SceneManager.LoadScene("Level3_AfterFredge");
+        AchievementManager.Instance.UnlockAchievement("Achievement8");
+        Debug.Log("Achievement8 разблокирован!");
     }
 }

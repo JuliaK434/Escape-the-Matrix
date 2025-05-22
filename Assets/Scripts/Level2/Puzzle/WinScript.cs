@@ -20,6 +20,7 @@ public class WinScript : MonoBehaviour
         {
             myPanel.SetActive(false); // Скрываем панель с пазлом
             winPanel.SetActive(true); // Показываем панель победы
+            AchievementManager.Instance.UnlockAchievement("Achievement4"); //Разблокируем достижение 4
             Invoke("ReturnToMainScene", 2f); // Возвращаемся на основную сцену через 2 секунды
         }
     }
