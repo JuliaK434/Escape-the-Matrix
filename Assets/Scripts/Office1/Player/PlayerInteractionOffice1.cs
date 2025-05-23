@@ -17,8 +17,8 @@ public class PlayerInteractionOffice1 : MonoBehaviour
         {
             if (Input.GetKeyDown(interactionKey))
             {
-                Debug.Log("Take Wardrobe");
-                Debug.Log(other.gameObject);
+                //Debug.Log("Take Wardrobe");
+                //Debug.Log(other.gameObject);
                 _throwController = GetComponent<ThrowController>();
                 _throwController.SetHasBottle();
                 //_throwController.throwablePrefab = other.gameObject;
@@ -55,7 +55,7 @@ public class PlayerInteractionOffice1 : MonoBehaviour
             {
                 if (Task1Manager.Instance != null)
                 {
-                    Debug.Log("Almost open computer");
+                    //Debug.Log("Almost open computer");
                     Task1Manager.Instance.OpenComputer();
                 }
             }

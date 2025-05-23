@@ -1,12 +1,15 @@
 using MBT;
 using UnityEngine;
 using System.Collections;
+using System.Diagnostics;
 
 [AddComponentMenu("")]
 [MBTNode("Actions/ActivateButton")]
 public class ActivateButton: Leaf
 
 {
+    private Stopwatch stopwatch = new Stopwatch();
+
     private float _timer;
     private float _animationTime = 1.05f;
     private bool _animationPlay;
@@ -20,6 +23,7 @@ public class ActivateButton: Leaf
     }
     public override NodeResult Execute()
     {
+        stopwatch.Start();
         if (!_animationPlay)
         {
             _animationPlay = true;
@@ -45,7 +49,10 @@ public class ActivateButton: Leaf
 
     public override void OnExit()
     {
-        _blackboard.isUse = false; 
+        _blackboard.isUse = false;
+        stopwatch.Stop();
+        UnityEngine.Debug.Log($"ActivateButton execution time: {stopwatch.ElapsedMilliseconds * 10000} ms");
+        stopwatch.Reset();
     }
 
 

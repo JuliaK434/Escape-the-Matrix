@@ -1,6 +1,8 @@
 using UnityEngine;
 using MBT;
 using System.Collections;
+using System.Diagnostics;
+
 [AddComponentMenu("")]
 [MBTNode("Actions/LookAround")]
 public class LookAround : Leaf
@@ -9,6 +11,9 @@ public class LookAround : Leaf
     private float _seePlayerTimer;
     private Blackboard _blackboard;
     private float _bViewAngle;
+
+
+    private Stopwatch stopwatch = new Stopwatch();
 
     public override void OnEnter()
     {
@@ -19,7 +24,8 @@ public class LookAround : Leaf
 
     }
     public override NodeResult Execute()
-    { 
+    {
+        stopwatch.Start();
         if (_blackboard.SeePlayer)
         {
             return NodeResult.success;
@@ -38,8 +44,9 @@ public class LookAround : Leaf
         return NodeResult.running;
     }
 
+
     public override void OnExit()
     {
-       _blackboard.ViewAngle = _bViewAngle;
+        _blackboard.ViewAngle = _bViewAngle;
     }
 }

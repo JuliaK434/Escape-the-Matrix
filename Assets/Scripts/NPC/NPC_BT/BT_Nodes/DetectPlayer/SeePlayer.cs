@@ -1,5 +1,7 @@
 using UnityEngine;
 using MBT;
+using System.Diagnostics;
+
 [AddComponentMenu("")]
 [MBTNode("Conditions/SeePlayer")]
 public class SeePlayer : Leaf
@@ -15,5 +17,7 @@ public class SeePlayer : Leaf
     {
         return _blackboard.SeePlayer ? NodeResult.success : NodeResult.failure;
     }
+
+
 
 }

@@ -17,7 +17,7 @@ public class Button1 : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         
-        if ( (collision.tag == "Player" && collision is CapsuleCollider2D ) || collision.tag == "Book")
+        if ( (collision.tag == "Player" && collision is CapsuleCollider2D ) || (collision.tag == "Book" && !(collision is CircleCollider2D)))
         { 
             _fire.SetActive(true);
             IsFire?.Invoke(true);

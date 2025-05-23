@@ -3,7 +3,7 @@ using Unity.Hierarchy;
 using UnityEngine;
 public class VisionSensor : MonoBehaviour
 {
-    public float ViewDistance = 5f;
+    public float ViewDistance = 100f;
    
     public LayerMask PlayerMask;
     public LayerMask AnomalyMask;
@@ -23,8 +23,9 @@ public class VisionSensor : MonoBehaviour
     {
         while (true)
         {
-            _PlayerCollider = DetectItem(PlayerMask);
-            _AnomalyCollider = DetectItem(AnomalyMask);
+
+            _PlayerCollider = DetectAnomaly(PlayerMask);
+            _AnomalyCollider = DetectAnomaly(AnomalyMask);//DetectItem(AnomalyMask);
 
             if (_AnomalyCollider != null)
             {
@@ -49,8 +50,6 @@ public class VisionSensor : MonoBehaviour
     }
     Collider2D DetectItem(LayerMask ItemMask) 
     {
-        //Debug.Log(ViewDistance);
-
         Collider2D target = Physics2D.OverlapCircle(transform.position, ViewDistance, ItemMask);
         if (target != null)
         {
@@ -85,6 +84,49 @@ public class VisionSensor : MonoBehaviour
                         return null;
                 }
             }
+        }
+        return null;
+    }
+
+
+    Collider2D DetectAnomaly(LayerMask ItemMask)
+    {
+        Collider2D[] anomalies = Physics2D.OverlapCircleAll(transform.position, ViewDistance, ItemMask);
+        Collider2D nearAnomaly = null;
+        float minDistance = Mathf.Infinity;
+        foreach (var anomaly in anomalies)
+        {
+            if(anomaly is CircleCollider2D)
+            {
+                continue;
+            }
+            Vector2 dirToTarget = (anomaly.transform.position - transform.position).normalized;
+            float distanceToTarget = Vector2.Distance(transform.position, anomaly.transform.position);
+            float angleToTarget = Vector2.Angle(transform.right, dirToTarget);
+
+            if (angleToTarget < blackboard.ViewAngle / 2)
+            {
+                Debug.DrawRay(transform.position, dirToTarget * distanceToTarget, Color.red, 1f);
+                RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, dirToTarget, distanceToTarget, ObstacleMask | ItemMask);
+                    foreach (var hit in hits) 
+                    {
+                        if (((1 << hit.collider.gameObject.layer) & ObstacleMask) != 0)
+                            break;
+
+                        if (((1 << hit.collider.gameObject.layer) & ItemMask) != 0)
+                        {
+                            if (distanceToTarget < minDistance)
+                            {
+                                nearAnomaly = hit.collider;
+                                minDistance = distanceToTarget;
+                            }
+                        }
+                    }
+            }
+        }
+        if(nearAnomaly != null)
+        {
+            return nearAnomaly;
         }
         return null;
     }

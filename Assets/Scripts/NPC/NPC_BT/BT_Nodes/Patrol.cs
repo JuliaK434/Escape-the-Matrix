@@ -1,6 +1,7 @@
 using UnityEngine;
 using MBT;
 using UnityEngine.AI;
+using System.Diagnostics;
 
 [AddComponentMenu("")]
 [MBTNode("Actions/Patrol")]
@@ -17,16 +18,15 @@ public class Patrol: Leaf
         blackboard.isWalk = true;
     }
     public override NodeResult Execute()
-    { 
+    {
 
-        if(blackboard.wayPoints.Length == 0)
+        if (blackboard.wayPoints.Length == 0)
         {
             return NodeResult.failure;
         }
 
         if(blackboard.SeePlayer || blackboard.SeeAnomaly)
         {
-            
             return NodeResult.failure;
         }
 

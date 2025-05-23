@@ -1,6 +1,7 @@
 using UnityEngine;
 using MBT;
 using UnityEngine.AI;
+using System.Diagnostics;
 
 [AddComponentMenu("")]
 [MBTNode("Actions/ResetChasing")]
@@ -13,7 +14,8 @@ public class ResetChasing: Leaf
     }
     public override NodeResult Execute()
     {
-        if(_blackboard._agent != null)
+
+        if (_blackboard._agent != null)
         {
             _blackboard._agent.speed = _blackboard.PatrolSpeed;
         }
@@ -22,4 +24,5 @@ public class ResetChasing: Leaf
         _blackboard.SeePlayer = false;
         return NodeResult.success;
     }
+
 }
